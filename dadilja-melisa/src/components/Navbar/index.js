@@ -5,10 +5,7 @@ const Navbar = () => {
        
             <nav>
                 <div>
-                    <select name="language" id="language">
-                        <option value="English">English</option>
-                        <option value="Serbian">Serbian</option>
-                    </select>
+                    {/* svg logo here */}
                 </div>
                 <ul>
                     <li><a>Home</a></li>
@@ -16,6 +13,12 @@ const Navbar = () => {
                     <li><a>Prices</a></li>
                     <li><a>Contact</a></li>
                 </ul>
+                <div>
+                    <select name="language" id="language">
+                        <option value="English">English</option>
+                        <option value="Serbian">Serbian</option>
+                    </select>
+                </div>
             </nav>
         
     );
