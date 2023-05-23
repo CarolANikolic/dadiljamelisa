@@ -1,3 +1,24 @@
-/* Here comes the style and root: {} for style classes */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
+:root {
 
+/* Colors */
+/* Basic */
+    ---white: #FFFFFF;
+    ---lightGray: #F3F3F3;
+    ---black: #1A1A1A;
+
+/* Primary */
+    ---beige: #F2E8DF;
+    ---darkPink: #F28585;
+    ---lightPink: #F2C6C2;
+    ---yellow: #F2B263;
+    ---green: #86A69D;
+    ---grey: #5D6875;
+
+/* Font weights */
+    ---regular: 400;
+    ---medium: 500;
+    ---semiBold: 600;
+    ---bold: 700;
+}

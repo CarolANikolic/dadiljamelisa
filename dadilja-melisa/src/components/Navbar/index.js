@@ -1,6 +1,8 @@
+import styles from './Navbar.module.css'
+
 const Navbar = () => {
     return (
-        <>
+       
             <nav>
                 <div>
                     <select name="language" id="language">
@@ -15,7 +17,7 @@ const Navbar = () => {
                     <li><a>Contact</a></li>
                 </ul>
             </nav>
-        </>
+        
     );
 };
 
