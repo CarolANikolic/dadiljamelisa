@@ -21,4 +21,17 @@
     ---medium: 500;
     ---semiBold: 600;
     ---bold: 700;
+
+    /* Fonts types */
+    ---montserrat: 'Montserrat', 'sans serif';
+    ---amatic: 'Amatic SC', 'cursive';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
 }

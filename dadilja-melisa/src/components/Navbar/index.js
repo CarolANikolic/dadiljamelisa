@@ -1,26 +1,34 @@
-import styles from './Navbar.module.css'
+import Link from 'next/link';
+import styles from './navbar.module.css'
+import Image from 'next/image';
+import Menu from '@/components/Menu';
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
-       
             <nav>
-                <div>
-                    {/* svg logo here */}
+                <div className={styles.logoContainer}>
+                    <Image className={styles.logo} src="./svgs/logo-horizontal.svg" width={100} height={80} alt="Dadilja Melisa logo"/>
                 </div>
-                <ul>
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Prices</a></li>
-                    <li><a>Contact</a></li>
-                </ul>
-                <div>
-                    <select name="language" id="language">
+
+                <div className={styles.listContainer}>
+                    <Menu menuTitle="Menu"/>
+                    <ul className={styles.list}>
+                        <li><Link className={styles.listItem} href="/">Home</Link></li>
+                        <li><Link className={styles.listItem} href="/">About</Link></li>
+                        <li><Link className={styles.listItem} href="/">Prices</Link></li>
+                        <li><Link className={styles.listItem} href="/">Contact</Link></li> 
+                    </ul>
+                </div>
+
+                <div className={styles.listContainer}>
+                    <select className={styles.selectLng} name="language" id="language">
                         <option value="English">English</option>
                         <option value="Serbian">Serbian</option>
                     </select>
                 </div>
+
+               
             </nav>
-        
     );
 };
 

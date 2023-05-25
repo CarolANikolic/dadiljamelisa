@@ -1,0 +1,29 @@
+.allMenu {
+    display: flex;
+    align-items: center;
+}
+
+.menuContainer {
+    cursor: pointer;
+    width: 40px;
+}
+
+.bar1, .bar2, .bar3 {
+    background-color: var(---black);
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+
+.changeMenu .bar1 {
+    translate: translate(0, 11px) rotate(-45deg);
+}
+
+.changeMenu .bar2 {
+    opacity: 0;
+}
+
+.changeMenu .bar3 {
+    translate: translate(0, -11px) rotate(45deg);
+}

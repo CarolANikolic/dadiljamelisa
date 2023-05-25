@@ -1,0 +1,65 @@
+.logoContainer {
+    text-align: center;
+    width: 100%;
+    height: 78px;
+    position: relative;
+}
+
+.logo {
+    width: 234px;
+}
+
+.listContainer {
+    background: var(---beige);
+    padding: 4px 16px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 388px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+    line-height: 30px;
+    display: none;
+}
+
+.listItem {
+    font-size: 0.875rem;
+    margin-top: 5%;
+}
+
+.listItem:visited {
+    color:var(---black);
+}
+
+.listItem:hover {
+    border-bottom: 2px solid var(---yellow);
+}
+
+.menu {
+    width: 73px;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.selectLng {
+    background-image: url(/svgs/globe.svg);
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
+    background-color: var(--beige);
+    padding: 8px 20px;
+    background-position: 0;
+    border-style: none;
+    font-size: 0.875rem;
+    font-family: var(---montserrat);
+    position: absolute;
+    top: 85px;
+    right: 16px;
+}

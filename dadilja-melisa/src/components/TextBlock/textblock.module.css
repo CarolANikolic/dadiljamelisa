@@ -1,0 +1,23 @@
+.headingPlayfull {
+    font-family: var(---amatic);
+    text-align: center;
+}
+
+.headingPlayfullBig {
+    font-size: 2rem;
+}
+
+.headingPlayfullSmaller {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.headingRegular {
+    font-size: 1rem;
+}
+
+.paragraphStyle {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    text-align: justify;
+}
