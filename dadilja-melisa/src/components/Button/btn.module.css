@@ -1,0 +1,13 @@
+.btnContainer {
+    text-align: center;
+}
+
+.generalBtn {
+    background-color: var(---green);
+    color: var(---white);
+    border-radius: 19px;
+    padding: .625rem 1.5rem;
+    border-style: none;
+    font-family: var(---montserrat);
+    font-weight: var(---bold);
+}
