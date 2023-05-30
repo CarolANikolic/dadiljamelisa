@@ -4,6 +4,7 @@ import styles from './page.module.css';
 import Image from 'next/image';
 import Menu from '@/components/Menu';
 import Button from '@/components/Button';
+import ImgText from '@/components/ImgText';
 
 export default function Home() {
   return (
@@ -33,6 +34,10 @@ export default function Home() {
           
           <TextBlock headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."/>
           <TextBlock paragraph paragraphContent="As an educator, I go beyond traditional childcare. With me, your children thrive through enriching workshops, tailored educational programs, fun-filled sports activities, and exciting field trips. Trust me to care for your children and educate and empower them for a bright future."/>
+        </section>
+
+        <section>
+          <ImgText/>
         </section>
     </main>
   );
