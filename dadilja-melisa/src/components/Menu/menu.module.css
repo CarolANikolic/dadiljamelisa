@@ -6,6 +6,7 @@
 .menuContainer {
     cursor: pointer;
     width: 40px;
+    position: relative;
 }
 
 .bar1, .bar2, .bar3 {
@@ -13,11 +14,13 @@
     width: 30px;
     height: 2px;
     margin: 6px 0;
-    transition: 0.5s;
+    transition: all 0.5s;
 }
 
 .changeMenu .bar1 {
-    translate: translate(0, 11px) rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 1rem;
+    position: absolute;
 }
 
 .changeMenu .bar2 {
@@ -25,5 +28,7 @@
 }
 
 .changeMenu .bar3 {
-    translate: translate(0, -11px) rotate(45deg);
+    transform: rotate(45deg);
+    top: 1rem;
+    position: absolute;
 }

@@ -1,3 +1,4 @@
+"use client"
 import TextBlock from '@/components/TextBlock';
 import Navbar from '@/components/Navbar';
 import styles from './page.module.css';

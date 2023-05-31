@@ -2,8 +2,11 @@ import Link from 'next/link';
 import styles from './navbar.module.css'
 import Image from 'next/image';
 import Menu from '@/components/Menu';
+import { useState } from 'react';
 
-const Navbar = (props) => {
+const Navbar = () => {
+    const [menu, setMenu] = useState(false);
+
     return (
             <nav>
                 <div className={styles.logoContainer}>
@@ -11,13 +14,15 @@ const Navbar = (props) => {
                 </div>
 
                 <div className={styles.listContainer}>
-                    <Menu menuTitle="Menu"/>
+                    <Menu menuTitle="Menu" toggle={{menu, setMenu}}/>
+                    {menu &&
                     <ul className={styles.list}>
                         <li><Link className={styles.listItem} href="/">Home</Link></li>
                         <li><Link className={styles.listItem} href="/">About</Link></li>
                         <li><Link className={styles.listItem} href="/">Prices</Link></li>
                         <li><Link className={styles.listItem} href="/">Contact</Link></li> 
                     </ul>
+                    }
                 </div>
 
                 <div className={styles.listContainer}>
@@ -26,8 +31,6 @@ const Navbar = (props) => {
                         <option value="Serbian">Serbian</option>
                     </select>
                 </div>
-
-               
             </nav>
     );
 };
