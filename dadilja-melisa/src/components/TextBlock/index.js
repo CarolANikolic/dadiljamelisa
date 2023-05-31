@@ -20,7 +20,7 @@ const TextBlock = (props) => {
 export default TextBlock;
 
 TextBlock.propTypes = {
-  headingType: PropTypes.string,
+  headingType: PropTypes.bool,
   headingOneContent: PropTypes.string,
   headingTwoContent: PropTypes.string,
   paragraphContent: PropTypes.string,
