@@ -3,7 +3,6 @@ import TextBlock from '@/components/TextBlock';
 import Navbar from '@/components/Navbar';
 import styles from './page.module.css';
 import Image from 'next/image';
-import Menu from '@/components/Menu';
 import Button from '@/components/Button';
 import ImgText from '@/components/ImgText';
 
