@@ -24,3 +24,11 @@
   gap: 1.25rem;
   padding: 1.5rem 1rem;
 }
+
+.containerPrices {
+  width: 248px;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin: 0 auto;
+}

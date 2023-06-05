@@ -43,6 +43,12 @@ export default function Home() {
         <section className={styles.containerGap}>
           <TextBlock headingType heading="headingSmaller" headingOneContent="Competitive and Transparent Pricing"/>
           <TextBlock uppercase="uppercase" headingTwoContent="Weekend promotion 24H for EUR 50"/>
+
+          <div className={styles.containerPrices}>
+            <Image src="/svgs/price-one-kid.svg" width={248} height={225} alt="price for one kid"/>
+            <Image src="/svgs/price-two-kids.svg" width={248} height={225} alt="price for two kids"/>
+            <Image src="/svgs/price-three-kids.svg" width={248} height={225} alt="price for three kids"/>
+          </div>
         </section>
     </main>
   );
