@@ -4,13 +4,13 @@ import styles from './imgText.module.css';
 import TextBlock from '../TextBlock';
 
 const ImageAndText = () => {
+
     return activitiesImg.map((activity) => (
         <div className={styles.container}>
             <div className={styles.activityImgContainer}>
                 <Image className={styles.activityImg} src={activity.source} width={100} height={100} alt={activity.alt} />
                 <div className={styles.content}>
                 <p>Learn more</p>  
-                <i class="fa-solid fa-chevron-down"></i>
                 </div>
             </div>
 

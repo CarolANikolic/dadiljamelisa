@@ -22,7 +22,6 @@
 
 .content {
     position: absolute; 
-    /* display: flex; */
     bottom: 0; 
     background-color: var(---lightGray);  /* fallback color */
     background-color: rgba(217, 217, 217, 0.4); /* Gray background with 0.4 opacity */
@@ -37,6 +36,7 @@
     text-align: center;
     gap: 1.5rem;
     padding: 1.5rem;
+    display: none;
 }
 
 .green {

@@ -32,12 +32,17 @@ export default function Home() {
             <Image className={styles.image} src="/svgs/melisa.svg"  width={100} height={100} alt="melisas's profile"/>
           </div>
           
-          <TextBlock headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."/>
+          <TextBlock bold="bold" align="justify" headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."/>
           <TextBlock paragraph paragraphContent="As an educator, I go beyond traditional childcare. With me, your children thrive through enriching workshops, tailored educational programs, fun-filled sports activities, and exciting field trips. Trust me to care for your children and educate and empower them for a bright future."/>
         </section>
 
         <section>
           <ImgText/>
+        </section>
+        
+        <section className={styles.containerGap}>
+          <TextBlock headingType heading="headingSmaller" headingOneContent="Competitive and Transparent Pricing"/>
+          <TextBlock uppercase="uppercase" headingTwoContent="Weekend promotion 24H for EUR 50"/>
         </section>
     </main>
   );
