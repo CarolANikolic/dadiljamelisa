@@ -50,6 +50,12 @@ export default function Home() {
             <Image src="/svgs/price-three-kids.svg" width={248} height={225} alt="price for three kids"/>
           </div>
         </section>
+
+        <section className={styles.containerGap}>
+          <TextBlock headingType heading="headingPlayfullSmaller" headingOneContent="Let me provide exceptional care for your child while you enjoy a well-deserved break!"/>
+          <TextBlock bold="bold" headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."/>
+          <TextBlock bold="bold" headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
+        </section>
     </main>
   );
 }
