@@ -26,6 +26,7 @@ const Navbar = () => {
                 </div>
 
                 <div className={styles.listContainer}>
+                    
                     <select className={styles.selectLng} name="language" id="language">
                         <option value="English">English</option>
                         <option value="Serbian">Serbian</option>

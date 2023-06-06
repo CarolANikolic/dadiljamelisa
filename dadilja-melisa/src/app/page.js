@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import Image from 'next/image';
 import Button from '@/components/Button';
 import ImgText from '@/components/ImgText';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -56,6 +57,8 @@ export default function Home() {
           <TextBlock bold="bold" headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."/>
           <TextBlock bold="bold" headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
         </section>
+
+        <Footer/>
     </main>
   );
 }
