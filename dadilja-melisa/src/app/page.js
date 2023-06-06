@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import ImgText from '@/components/ImgText';
 import Footer from '@/components/Footer';
+import Input from '@/components/Input';
 
 export default function Home() {
   return (
@@ -57,6 +58,14 @@ export default function Home() {
           <TextBlock bold="bold" headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."/>
           <TextBlock bold="bold" headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
         </section>
+
+        <form>
+          <Input name="Name" type="text" placeholder="Ana Petrović"/>
+          <Input name="Phone" type="tel" placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
+          <Input name="Email" type="email" placeholder="email@email.com"/>
+          <Input name="Message"type="text" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
+          <Button space="btnOutSpace" btnTitle="Scheduele"/>
+        </form>
 
         <Footer/>
     </main>
