@@ -1,0 +1,20 @@
+.inputField {
+    background-color: var(---beige);
+    border: 1px solid var(---black);
+    border-radius: 32px;
+    padding: .5rem 1rem;
+    font-family: var(---montserrat);
+    font-weight: var(---regular);
+}
+
+.inputField::placeholder {
+    color: var(---black);
+}
+
+.datepickerCalendar {
+    background-color: var(---white);
+    font-family: var(---montserrat);
+    padding: .5rem;
+    border-color: var(---black);
+    color:var(---black);
+}

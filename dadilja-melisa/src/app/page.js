@@ -7,6 +7,7 @@ import Button from '@/components/Button';
 import ImgText from '@/components/ImgText';
 import Footer from '@/components/Footer';
 import Input from '@/components/Input';
+import CalendarInput from '@/components/Calendar';
 
 export default function Home() {
   return (
@@ -66,6 +67,8 @@ export default function Home() {
           <Input name="Message"type="text" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
           <Button space="btnOutSpace" btnTitle="Scheduele"/>
         </form>
+
+        <CalendarInput/>
 
         <Footer/>
     </main>
