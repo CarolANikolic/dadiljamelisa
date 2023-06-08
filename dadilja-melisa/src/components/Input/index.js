@@ -10,6 +10,13 @@ const Input = (props) => {
         placeholder={props.placeholder} 
         required>
         </input>
+
+        {props.messageBox ? 
+
+        <div>
+            <label htmlFor={props.messageName}>{props.messageName}</label>
+            <textarea name={props.messageName} id={props.messageName} placeholder={props.placeholder} rows="4" cols="45"></textarea>
+        </div> : ''}
         </>
     ); 
 }

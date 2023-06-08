@@ -16,7 +16,7 @@ export default function Home() {
 
         <section>
           <div className={`${styles.imgContainer} ${styles.imgContainerDimensions}`}>
-            <Image className={styles.image} src="/svgs/kids.svg" width={100} height={100} alt="happy kids"/>
+            <Image className={styles.image} src="/svgs/photos/kids.svg" width={100} height={100} alt="happy kids"/>
           </div>
 
           <div className={styles.containerGap}>
@@ -32,7 +32,7 @@ export default function Home() {
 
         <section className={styles.containerGap}>
           <div className={styles.imgContainerDimensions}>
-            <Image className={styles.image} src="/svgs/melisa.svg"  width={100} height={100} alt="melisas's profile"/>
+            <Image className={styles.image} src="/svgs/photos/melisa.svg"  width={100} height={100} alt="melisas's profile"/>
           </div>
           
           <TextBlock bold="bold" align="justify" headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."/>
@@ -48,9 +48,9 @@ export default function Home() {
           <TextBlock uppercase="uppercase" headingTwoContent="Weekend promotion 24H for EUR 50"/>
 
           <div className={styles.containerPrices}>
-            <Image src="/svgs/price-one-kid.svg" width={248} height={225} alt="price for one kid"/>
-            <Image src="/svgs/price-two-kids.svg" width={248} height={225} alt="price for two kids"/>
-            <Image src="/svgs/price-three-kids.svg" width={248} height={225} alt="price for three kids"/>
+            <Image src="/svgs/elements/price-one-kid.svg" width={248} height={225} alt="price for one kid"/>
+            <Image src="/svgs/elements/price-two-kids.svg" width={248} height={225} alt="price for two kids"/>
+            <Image src="/svgs/elements/price-three-kids.svg" width={248} height={225} alt="price for three kids"/>
           </div>
         </section>
 
@@ -64,7 +64,7 @@ export default function Home() {
           <Input name="Name" type="text" placeholder="Ana Petrović"/>
           <Input name="Phone" type="tel" placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
           <Input name="Email" type="email" placeholder="email@email.com"/>
-          <Input name="Message"type="text" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
+          <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
           <Button space="btnOutSpace" btnTitle="Scheduele"/>
         </form>
 

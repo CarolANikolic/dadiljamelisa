@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
             <nav>
                 <div className={styles.logoContainer}>
-                    <Image className={styles.logo} src="./svgs/logo-horizontal.svg" width={100} height={80} alt="Dadilja Melisa logo"/>
+                    <Image className={styles.logo} src="./svgs/logo/logo-horizontal.svg" width={100} height={80} alt="Dadilja Melisa logo"/>
                 </div>
 
                 <div className={styles.listContainer}>

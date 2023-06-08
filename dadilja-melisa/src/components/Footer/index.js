@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
         <footer className={styles.footer}>
-            <Image className={styles.logo} src="/svgs/logo-vertical.svg" width={149} height={103} alt="Dadilja Melisa logo in vertical"/>
+            <Image className={styles.logo} src="/svgs/logo/logo-vertical.svg" width={149} height={103} alt="Dadilja Melisa logo in vertical"/>
 
             <div className={styles.footerText}>
                 <h1 className={styles.title}>About</h1>
