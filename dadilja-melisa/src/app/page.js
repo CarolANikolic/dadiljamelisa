@@ -62,20 +62,24 @@ export default function Home() {
 
         <form className={styles.contactForm}>
           
-          <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
-          <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>  
+          <div>
+            <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
+            <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>  
 
-          <Input generalInput name="Name" type="text" placeholder="Ana Petrović"/>
-          <Input generalInput name="Phone" type="tel" placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
-          <Input generalInput name="Email" type="email" placeholder="email@email.com"/>
+            <Input generalInput name="Name" type="text" placeholder="Ana Petrović"/>
+            <Input generalInput name="Phone" type="tel" placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
+            <Input generalInput name="Email" type="email" placeholder="email@email.com"/>
+          </div>
 
-          <CalendarInput/>
+          <div>
+            <CalendarInput/>
 
-          <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
+            <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
+          </div>
 
           <Button space="btnOutSpace" btnTitle="Scheduele"/>
 
-          <Image src="/svgs/elements/drawings.svg" width={300} height={100} alt="girl drawing"></Image>
+          <Image className={styles.drawings} src="/svgs/elements/drawings.svg" width={300} height={100} alt="girl drawing"></Image>
         </form>
 
         <Footer/>
