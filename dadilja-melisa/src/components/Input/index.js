@@ -6,6 +6,7 @@ const Input = (props) => {
         <input 
         type={props.type} 
         name={props.name} 
+        id={props.name}
         placeholder={props.placeholder} 
         required>
         </input>
