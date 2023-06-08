@@ -32,3 +32,15 @@
   gap: .5rem;
   margin: 0 auto;
 }
+
+.contactForm {
+  border: 11px solid var(---yellow);
+  background-color: var(---beige);
+  position:relative;
+}
+
+.sunDrawing {
+  position: absolute;
+  right: 8%;
+  top: 15%;
+}

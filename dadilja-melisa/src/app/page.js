@@ -60,12 +60,20 @@ export default function Home() {
           <TextBlock bold="bold" headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
         </section>
 
-        <form>
+        <form className={styles.contactForm}>
+          
+          <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
+          <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>
+          
+
           <Input name="Name" type="text" placeholder="Ana Petrović"/>
           <Input name="Phone" type="tel" placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
           <Input name="Email" type="email" placeholder="email@email.com"/>
           <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
+
           <Button space="btnOutSpace" btnTitle="Scheduele"/>
+
+          <Image src="/svgs/elements/drawings.svg" width={300} height={100} alt="girl drawing"></Image>
         </form>
 
         <CalendarInput/>
