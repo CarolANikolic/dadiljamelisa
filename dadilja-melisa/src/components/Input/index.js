@@ -1,23 +1,28 @@
+import styles from './input.module.css';
+
 const Input = (props) => {
     return (
-        <>
-        <label htmlFor={props.name}>{props.name}</label>
+        <div className={styles.inputContainer}>
 
-        <input 
-        type={props.type} 
-        name={props.name} 
-        id={props.name}
-        placeholder={props.placeholder} 
-        required>
-        </input>
+            {props.generalInput ?
+            <div className={styles.inputBlock}>
+                <label htmlFor={props.name}>{props.name}</label>
+                <input className={styles.inputField} 
+                type={props.type} 
+                name={props.name} 
+                id={props.name}
+                placeholder={props.placeholder} 
+                required>
+                </input>
+            </div> : ''}
 
-        {props.messageBox ? 
+            {props.messageBox ? 
 
-        <div>
-            <label htmlFor={props.messageName}>{props.messageName}</label>
-            <textarea name={props.messageName} id={props.messageName} placeholder={props.placeholder} rows="4" cols="45"></textarea>
-        </div> : ''}
-        </>
+            <div className={styles.inputBlock}>
+                <label htmlFor={props.messageName}>{props.messageName}</label>
+                <textarea className={styles.inputField} name={props.messageName} id={props.messageName} placeholder={props.placeholder} rows="4" cols="30"></textarea>
+            </div> : ''}
+        </div>
     ); 
 }
 

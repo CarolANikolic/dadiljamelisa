@@ -12,7 +12,7 @@ const CalendarInput = () => {
     const currentDate = new Date().toLocaleDateString();
   
     return (
-      <div>
+      <div className={styles.calendarContainer}>
           {/* Use htmlFor since for is a reserved JS keyword, in React and Next we use the "htmlFor" instead of "for" */}
           <label htmlFor="datePicker">Scheduele</label>
 
