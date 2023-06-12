@@ -54,6 +54,10 @@ export default function Home() {
           </div>
         </section>
 
+        <div className={styles.containerGap}>
+          <TextBlock headingType heading="headingSmaller" headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"/>
+        </div>
+
         <form className={styles.contactForm}>
           <div>
             <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
@@ -70,9 +74,9 @@ export default function Home() {
             <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
           </div>
 
-          <Button space="btnOutSpace" btnTitle="Scheduele"/>
+            <Button space="btnOutSpace" btnTitle="Scheduele"/>
 
-          <Image className={styles.drawings} src="/svgs/elements/drawings.svg" width={300} height={100} alt="girl drawing"></Image>
+            <Image className={styles.drawings} src="/svgs/elements/drawings.svg" width={300} height={100} alt="girl drawing"></Image>
         </form>
 
         <section className={styles.containerGap}>
