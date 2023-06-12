@@ -5,6 +5,9 @@
 }
 
 .inputField {
+    background-image: url(/svgs/icons/calendar.svg);
+    background-repeat: no-repeat;
+    background-position: 90%;
     background-color: var(---beige);
     border: 1px solid var(---black);
     border-radius: 32px;
