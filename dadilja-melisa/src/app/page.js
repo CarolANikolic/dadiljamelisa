@@ -54,14 +54,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.containerGap}>
-          <TextBlock headingType heading="headingPlayfullSmaller" headingOneContent="Let me provide exceptional care for your child while you enjoy a well-deserved break!"/>
-          <TextBlock bold="bold" headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."/>
-          <TextBlock bold="bold" headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
-        </section>
-
         <form className={styles.contactForm}>
-          
           <div>
             <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
             <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>  
@@ -81,6 +74,12 @@ export default function Home() {
 
           <Image className={styles.drawings} src="/svgs/elements/drawings.svg" width={300} height={100} alt="girl drawing"></Image>
         </form>
+
+        <section className={styles.containerGap}>
+          <TextBlock headingType heading="headingPlayfullSmaller" headingOneContent="Let me provide exceptional care for your child while you enjoy a well-deserved break!"/>
+          <TextBlock bold="bold" headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."/>
+          <TextBlock bold="bold" headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
+        </section>
 
         <Footer/>
     </main>
