@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./footer.module.css"
+import styles from "./footer.module.css";
 
 const Footer = () => {
     const emailTitle = "Schedule a weekend care";

@@ -1,4 +1,5 @@
 import styles from './input.module.css';
+import propTypes from 'prop-types';
 
 const Input = (props) => {
     return (
@@ -27,3 +28,12 @@ const Input = (props) => {
 }
 
 export default Input;
+
+Input.propTypes = {
+    generalInput: propTypes.bool,
+    name: propTypes.string,
+    type: propTypes.string,
+    placeholder: propTypes.string,
+    messageBox: propTypes.bool,
+    messageName: propTypes.string
+};

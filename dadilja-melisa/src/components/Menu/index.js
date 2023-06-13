@@ -1,5 +1,5 @@
 import styles from './menu.module.css';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 const Menu = (props) => {
     const {menu, setMenu} = props.toggle;
@@ -18,5 +18,5 @@ const Menu = (props) => {
 export default Menu;
 
 Menu.propTypes = {
-    menuTitle: PropTypes.string
+    menuTitle: propTypes.string
 };

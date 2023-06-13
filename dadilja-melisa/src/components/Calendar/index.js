@@ -2,7 +2,7 @@ import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from './calendar.module.css';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 const CalendarInput = (props) => {
 
@@ -34,6 +34,6 @@ const CalendarInput = (props) => {
   
   export default CalendarInput;
 
-  CalendarInput.PropTypes = {
-    labelName: PropTypes.string
+  CalendarInput.propTypes = {
+    labelName: propTypes.string
   };
