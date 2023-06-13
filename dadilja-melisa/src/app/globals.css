@@ -32,6 +32,10 @@
     margin: 0;
 }
 
+main {
+    width: 100vw;
+}
+
 a {
     text-decoration: none;
 }

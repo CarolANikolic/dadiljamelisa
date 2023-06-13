@@ -8,6 +8,7 @@ import ImgText from '@/components/ImgText';
 import Footer from '@/components/Footer';
 import Input from '@/components/Input';
 import CalendarInput from '@/components/Calendar';
+import activitiesImg from '@/assets/objects/activitiesImg';
 
 export default function Home() {
   return (
@@ -40,7 +41,10 @@ export default function Home() {
         </section>
 
         <section>
-          <ImgText/>
+          {activitiesImg.map((activity, index) =>  
+            <ImgText key={index} {...activity}/> //
+            )
+          }
         </section>
         
         <section className={styles.containerGap}>

@@ -36,7 +36,6 @@
     text-align: center;
     gap: 1.5rem;
     padding: 1.5rem;
-    display: none;
 }
 
 .green {
@@ -53,4 +52,8 @@
 
 .darkPink {
     background-color: var(---darkPink);
+}
+
+.closeIcon {
+    margin: 0 auto;
 }
