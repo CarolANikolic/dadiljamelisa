@@ -15,10 +15,10 @@ const CalendarInput = (props) => {
     return (
       <div className={styles.calendarContainer}>
           {/* Use htmlFor since for is a reserved JS keyword, in React and Next we use the "htmlFor" instead of "for" */}
-          <label htmlFor="datePicker">{props.labelName}</label>
+          <label htmlFor={props.name}>{props.labelName}</label>
 
         <DatePicker
-          id="datePicker" // to link with htmlFor label
+          id={props.name} // to link with htmlFor label
           selected={selectedDate} //atribute the selected date value/chosen date (initially null) to the props selected
           minDate={new Date()} // only shows the dates from current date and future, not the past.
           onChange={date => setSelectedDate(date)} //is set to a function that will be executed when the user changes or selects a date. The function receives an argument (in this case, named date). Whenever the user selects a new date, the onChange function updates the selectedDate by calling setSelectedDate function, passing the date argument as the new value to update the selectedDate variable.      
@@ -35,5 +35,6 @@ const CalendarInput = (props) => {
   export default CalendarInput;
 
   CalendarInput.propTypes = {
-    labelName: propTypes.string
+    labelName: propTypes.string,
+    name: propTypes.string
   };
