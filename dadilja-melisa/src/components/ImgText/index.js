@@ -13,7 +13,7 @@ const ImageAndText = ({source, alt, heading, paragraph, color}) => {
                 <Image className={styles.activityImg} src={source} width={100} height={100} alt={alt} />
                 {!showText && (
                 <div className={styles.content} onClick={() => setShowText(true)}>
-                <p>Learn more</p>  
+                    <p className={styles.activitiyDropdown}>Learn more</p>  
                 </div>
                 )
                 }

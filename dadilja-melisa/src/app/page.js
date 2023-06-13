@@ -42,7 +42,7 @@ export default function Home() {
 
         <section>
           {activitiesImg.map((activity, index) =>  
-            <ImgText key={index} {...activity}/> //
+            <ImgText key={index} {...activity}/> 
             )
           }
         </section>
