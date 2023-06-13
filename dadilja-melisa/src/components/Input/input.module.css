@@ -20,4 +20,21 @@
     padding: .5rem 1rem;
     font-family: var(---montserrat);
     font-weight: var(---regular);
+    background-repeat: no-repeat;
+    background-position: 90%;
 }
+
+.userIcon {
+    background-image: url(/svgs/icons/user.svg); 
+    color: var(---black);
+}
+
+.phoneIcon {
+    background-image: url(/svgs/icons/phone-dark.svg); 
+    color: var(---yellow);
+}
+
+.mailIcon {
+    background-image: url(/svgs/icons/mail-dark.svg); 
+}
+

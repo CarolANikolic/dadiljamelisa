@@ -67,9 +67,9 @@ export default function Home() {
             <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
             <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>  
 
-            <Input generalInput name="Name" type="text" placeholder="Ana Petrović"/>
-            <Input generalInput name="Phone" type="tel" placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
-            <Input generalInput name="Email" type="email" placeholder="email@email.com"/>
+            <Input user generalInput name="Name" type="text" placeholder="Ana Petrović"/>
+            <Input phone generalInput name="Phone" type="tel" placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
+            <Input mail generalInput name="Email" type="email" placeholder="email@email.com"/>
           </div>
 
           <div>

@@ -8,7 +8,9 @@ const Input = (props) => {
             {props.generalInput ?
             <div className={styles.inputBlock}>
                 <label htmlFor={props.name}>{props.name}</label>
-                <input className={styles.inputField} 
+                <input className={`${props.user ? styles.userIcon :
+                 props.phone ? styles.phoneIcon :
+                 props.mail ? styles.mailIcon : ''} ${styles.inputField}`} 
                 type={props.type} 
                 name={props.name} 
                 id={props.name}
