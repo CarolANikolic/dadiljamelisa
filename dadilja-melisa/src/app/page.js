@@ -73,7 +73,8 @@ export default function Home() {
           </div>
 
           <div>
-            <CalendarInput/>
+            <CalendarInput labelName="Starting date"/>
+            <CalendarInput labelName="Ending date"/>
 
             <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
           </div>

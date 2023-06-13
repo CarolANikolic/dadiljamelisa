@@ -2,8 +2,9 @@ import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from './calendar.module.css';
+import PropTypes from 'prop-types';
 
-const CalendarInput = () => {
+const CalendarInput = (props) => {
 
     // use useState hook to create a state variable and a function to update the value. The initial value is set to null since, initially there is no input/date selected.
     const [selectedDate, setSelectedDate] = useState(null);
@@ -14,7 +15,7 @@ const CalendarInput = () => {
     return (
       <div className={styles.calendarContainer}>
           {/* Use htmlFor since for is a reserved JS keyword, in React and Next we use the "htmlFor" instead of "for" */}
-          <label htmlFor="datePicker">Scheduele</label>
+          <label htmlFor="datePicker">{props.labelName}</label>
 
         <DatePicker
           id="datePicker" // to link with htmlFor label
@@ -32,3 +33,7 @@ const CalendarInput = () => {
   };
   
   export default CalendarInput;
+
+  CalendarInput.PropTypes = {
+    labelName: PropTypes.string
+  };
