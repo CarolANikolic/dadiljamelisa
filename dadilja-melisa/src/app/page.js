@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import Input from '@/components/Input';
 import CalendarInput from '@/components/Calendar';
 import activitiesImg from '@/assets/objects/activitiesImg';
+import Carousel from '@/components/Carousel';
 
 export default function Home() {
   return (
