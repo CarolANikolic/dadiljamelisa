@@ -66,4 +66,6 @@
 
 .closeIcon {
     margin: 0 auto;
+    rotate: 180deg;
+    width: 1.5rem;
 }
