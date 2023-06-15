@@ -33,6 +33,10 @@
   margin: 0 auto;
 }
 
+.birdLogo {
+  align-self: center;
+}
+
 .contactForm {
   border: 11px solid var(---yellow);
   background-color: var(---beige);

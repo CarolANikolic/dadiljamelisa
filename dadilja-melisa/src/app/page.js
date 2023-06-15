@@ -62,7 +62,7 @@ export default function Home() {
         
         <section className={styles.containerGap}>
           <TextBlock headingType heading='headingSmaller' headingOneContent="What the parents have to say"/>
-          <Image src="/svgs/logo/logo-bird.svg" width={100} height={100} alt="logo without brand name"></Image>
+          <Image className={styles.birdLogo} src="/svgs/logo/logo-bird.svg" width={100} height={100} alt="logo without brand name"></Image>
         </section>
           <Carousel slides={reviews} textOne="testimonial" textTwo="writer"/>
 
