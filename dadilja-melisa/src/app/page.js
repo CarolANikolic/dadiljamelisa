@@ -10,6 +10,7 @@ import Input from '@/components/Input';
 import CalendarInput from '@/components/Calendar';
 import activitiesImg from '@/assets/objects/activitiesImg';
 import Carousel from '@/components/Carousel';
+import reviews from '@/assets/objects/reviews';
 
 export default function Home() {
   return (
@@ -58,6 +59,8 @@ export default function Home() {
             <Image src="/svgs/elements/price-three-kids.svg" width={248} height={225} alt="price for three kids"/>
           </div>
         </section>
+          
+        <Carousel slides={reviews} textOne="testimonial" textTwo="writer"/>
 
         <div className={styles.containerGap}>
           <TextBlock headingType heading="headingSmaller" headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"/>
@@ -90,6 +93,7 @@ export default function Home() {
           <TextBlock bold="bold" headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."/>
           <TextBlock bold="bold" headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
         </section>
+
 
         <Footer/>
     </main>

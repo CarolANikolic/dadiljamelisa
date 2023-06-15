@@ -15,7 +15,7 @@ const reviews = [
     },
 
     {
-      testimonial: "There is no better and more responsible babysitter in Belgrade than Melisa. She has done a great job with our little one, caring for and teaching her during the pandemic. I truly recommend it! (Update this text when programming)",
+      testimonial: "There is no better and more responsible babysitter in Belgrade than Melisa. She has done a great job with our little one, caring for and teaching her during the pandemic. I truly recommend it!",
       writer: "Branislav Nikolić"
     }
 
