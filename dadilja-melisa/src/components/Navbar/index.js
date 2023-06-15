@@ -17,10 +17,10 @@ const Navbar = () => {
                     <Menu menuTitle="Menu" toggle={{menu, setMenu}}/>
                     {menu &&
                     <ul className={styles.list}>
-                        <li><Link className={styles.listItem} href="/">Home</Link></li>
-                        <li><Link className={styles.listItem} href="/">About</Link></li>
-                        <li><Link className={styles.listItem} href="/">Prices</Link></li>
-                        <li><Link className={styles.listItem} href="/">Contact</Link></li> 
+                        <li><Link className={styles.listItem} href="#home">Home</Link></li>
+                        <li><Link className={styles.listItem} href="#about">About</Link></li>
+                        <li><Link className={styles.listItem} href="#prices">Prices</Link></li>
+                        <li><Link className={styles.listItem} href="#contact">Contact</Link></li> 
                     </ul>
                     }
                 </div>

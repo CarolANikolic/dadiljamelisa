@@ -17,7 +17,7 @@ export default function Home() {
     <main className={styles.main}>
         <Navbar/>
 
-        <section>
+        <section id="home">
           <div className={`${styles.imgContainer} ${styles.imgContainerDimensions}`}>
             <Image className={styles.image} src="/svgs/photos/kids.svg" width={100} height={100} alt="happy kids"/>
           </div>
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.containerGap}>
+        <section className={styles.containerGap} id="about">
           <div className={styles.imgContainerDimensions}>
             <Image className={styles.image} src="/svgs/photos/melisa.svg"  width={100} height={100} alt="melisas's profile"/>
           </div>
@@ -49,7 +49,7 @@ export default function Home() {
           }
         </section>
         
-        <section className={styles.containerGap}>
+        <section className={styles.containerGap} id="prices">
           <TextBlock headingType heading="headingSmaller" headingOneContent="Competitive and Transparent Pricing"/>
           <TextBlock uppercase="uppercase" headingTwoContent="Weekend promotion 24H for EUR 50"/>
 
@@ -66,7 +66,7 @@ export default function Home() {
         </section>
           <Carousel slides={reviews} textOne="testimonial" textTwo="writer"/>
 
-        <div className={styles.containerGap}>
+        <div className={styles.containerGap} id="contact">
           <TextBlock headingType heading="headingSmaller" headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"/>
         </div>
 
