@@ -25,7 +25,7 @@ const ImageAndText = ({source, alt, heading, paragraph, color}) => {
                 color === "beige" ? styles.beige :
                 color === "darkPink" ? styles.darkPink : ''} ${styles.explanationContainer}`}>
                     
-                <TextBlock headingTwoContent={heading}/>
+                <TextBlock bold="bold" headingTwoContent={heading}/>
                 <TextBlock paragraph paragraphContent={paragraph}/>
                 <Image className={styles.closeIcon} src="/svgs/icons/chevron-down.svg" width={40} height={40} alt="x close" onClick={() => setShowText(false)}></Image>
             </div>
