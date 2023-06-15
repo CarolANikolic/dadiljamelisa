@@ -1,5 +1,5 @@
 .swiperContainer {
-    padding: 2rem;
+    padding: 0 2rem 2rem;
 }
 
 .slideContainer {
@@ -13,6 +13,22 @@
     font-style: italic;
     line-height: 1.25rem;
     text-align: center;
+    quotes: "“" "”";
+}
+
+.firstText::before {
+    content: open-quote;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding-right: 1rem;
+}
+
+.firstText::after {
+    content: close-quote;
+    font-size: 2rem;   
+    position: absolute; 
+    bottom: .8em; 
+    right: 0; 
 }
 
 .secondText {
