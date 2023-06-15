@@ -1,0 +1,23 @@
+.swiperContainer {
+    padding: 2rem;
+}
+
+.slideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem; 
+    justify-content: center;
+}
+
+.firstText {
+    font-style: italic;
+    line-height: 1.25rem;
+    text-align: center;
+}
+
+.secondText {
+    font-family: var(---montserrat);
+    font-style: italic;
+    font-weight: var(---medium);
+    text-align: right;
+}

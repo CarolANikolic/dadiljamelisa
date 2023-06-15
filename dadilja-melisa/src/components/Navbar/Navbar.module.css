@@ -25,7 +25,6 @@
     text-align: center;
     padding: 0 1rem;
     line-height: 30px;
-    display: none;
 }
 
 .listItem {
@@ -50,7 +49,7 @@
 }
 
 .selectLng {
-    background-image: url(/svgs/globe.svg);
+    background-image: url(/svgs/icons/globe.svg);
     background-repeat: no-repeat;
     background-size: 1.3rem;
     background-color: var(--beige);

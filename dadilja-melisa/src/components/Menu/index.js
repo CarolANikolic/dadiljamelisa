@@ -1,15 +1,16 @@
 import styles from './menu.module.css';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 const Menu = (props) => {
+    const {menu, setMenu} = props.toggle;
     return (
-    <div className={styles.allMenu}>
-        <div className={styles.menuContainer}>
+    <div className={styles.allMenu} onClick={() => setMenu(!menu)}>
+        <div className={`${styles.menuContainer} ${menu && styles.changeMenu}`}>
             <div className={styles.bar1}></div>
             <div className={styles.bar2}></div>
             <div className={styles.bar3}></div>
         </div>
-        <p>{props.menuTitle}</p>
+        <p>{!menu && props.menuTitle}</p>
     </div>
     )
 };
@@ -17,5 +18,5 @@ const Menu = (props) => {
 export default Menu;
 
 Menu.propTypes = {
-    menuTitle: PropTypes.string
+    menuTitle: propTypes.string
 };

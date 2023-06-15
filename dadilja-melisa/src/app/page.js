@@ -1,9 +1,16 @@
+"use client"
 import TextBlock from '@/components/TextBlock';
 import Navbar from '@/components/Navbar';
 import styles from './page.module.css';
 import Image from 'next/image';
-import Menu from '@/components/Menu';
 import Button from '@/components/Button';
+import ImgText from '@/components/ImgText';
+import Footer from '@/components/Footer';
+import Input from '@/components/Input';
+import CalendarInput from '@/components/Calendar';
+import activitiesImg from '@/assets/objects/activitiesImg';
+import Carousel from '@/components/Carousel';
+import reviews from '@/assets/objects/reviews';
 
 export default function Home() {
   return (
@@ -12,7 +19,7 @@ export default function Home() {
 
         <section>
           <div className={`${styles.imgContainer} ${styles.imgContainerDimensions}`}>
-            <Image className={styles.image} src="/svgs/kids.svg" width={100} height={100} alt="happy kids"/>
+            <Image className={styles.image} src="/svgs/photos/kids.svg" width={100} height={100} alt="happy kids"/>
           </div>
 
           <div className={styles.containerGap}>
@@ -28,12 +35,71 @@ export default function Home() {
 
         <section className={styles.containerGap}>
           <div className={styles.imgContainerDimensions}>
-            <Image className={styles.image} src="/svgs/melisa.svg"  width={100} height={100} alt="melisas's profile"/>
+            <Image className={styles.image} src="/svgs/photos/melisa.svg"  width={100} height={100} alt="melisas's profile"/>
           </div>
           
-          <TextBlock headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."/>
+          <TextBlock bold="bold" align="justify" headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."/>
           <TextBlock paragraph paragraphContent="As an educator, I go beyond traditional childcare. With me, your children thrive through enriching workshops, tailored educational programs, fun-filled sports activities, and exciting field trips. Trust me to care for your children and educate and empower them for a bright future."/>
         </section>
+
+        <section>
+          {activitiesImg.map((activity, index) =>  
+            <ImgText key={index} {...activity}/> 
+            )
+          }
+        </section>
+        
+        <section className={styles.containerGap}>
+          <TextBlock headingType heading="headingSmaller" headingOneContent="Competitive and Transparent Pricing"/>
+          <TextBlock uppercase="uppercase" headingTwoContent="Weekend promotion 24H for EUR 50"/>
+
+          <div className={styles.containerPrices}>
+            <Image src="/svgs/elements/price-one-kid.svg" width={248} height={225} alt="price for one kid"/>
+            <Image src="/svgs/elements/price-two-kids.svg" width={248} height={225} alt="price for two kids"/>
+            <Image src="/svgs/elements/price-three-kids.svg" width={248} height={225} alt="price for three kids"/>
+          </div>
+        </section>
+        
+        <section className={styles.containerGap}>
+          <TextBlock headingType heading='headingSmaller' headingOneContent="What the parents have to say"/>
+          <Image src="/svgs/logo/logo-bird.svg" width={100} height={100} alt="logo without brand name"></Image>
+        </section>
+          <Carousel slides={reviews} textOne="testimonial" textTwo="writer"/>
+
+        <div className={styles.containerGap}>
+          <TextBlock headingType heading="headingSmaller" headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"/>
+        </div>
+
+        <form className={styles.contactForm}>
+          <div>
+            <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
+            <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>  
+
+            <Input user generalInput name="Name" type="text" placeholder="Ana Petrović"/>
+            <Input phone generalInput name="Phone" type="tel" placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
+            <Input mail generalInput name="Email" type="email" placeholder="email@email.com"/>
+          </div>
+
+          <div>
+            <CalendarInput labelName="Starting date" name="startDate"/>
+            <CalendarInput labelName="Ending date" name="endDate"/>
+
+            <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
+          </div>
+
+            <Button space="btnOutSpace" btnTitle="Scheduele"/>
+
+            <Image className={styles.drawings} src="/svgs/elements/drawings.svg" width={300} height={100} alt="girl drawing"></Image>
+        </form>
+
+        <section className={styles.containerGap}>
+          <TextBlock headingType heading="headingPlayfullSmaller" headingOneContent="Let me provide exceptional care for your child while you enjoy a well-deserved break!"/>
+          <TextBlock bold="bold" headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."/>
+          <TextBlock bold="bold" headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
+        </section>
+
+
+        <Footer/>
     </main>
   );
 }

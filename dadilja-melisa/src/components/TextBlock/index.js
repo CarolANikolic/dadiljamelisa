@@ -4,12 +4,18 @@ import styles from './textblock.module.css'
 
 const TextBlock = (props) => {
   return (
-    <div className={styles.textBlockContainer}>
+    <div>
       {props.headingType ? 
-      <h1 className={`${props.heading === 'headingBig' ? styles.headingPlayfullBig : props.heading === 'headingSmaller' ? styles.headingPlayfullSmaller : ''} ${styles.headingPlayfull}`}>{props.
+      <h1 className={`${props.heading === 'headingBig' ?
+       styles.headingPlayfullBig : 
+       props.heading === 'headingSmaller' ? 
+       styles.headingPlayfullSmaller : ''} ${styles.headingPlayfull}`}>{props.
       headingOneContent}</h1> :
 
-      <h2 className={styles.headingRegular}>{props.headingTwoContent}</h2>}
+      <h2 className={`${props.bold === 'bold' ? 
+      styles.headingRegularBold : 
+      props.uppercase === 'uppercase' ? 
+      styles.headingRegularUppercase : ''} ${props.align === "justify" ? styles.headingRegularJustify : ''} ${styles.headingRegular}`}>{props.headingTwoContent}</h2>}
       {props.paragraph ? 
       
       <p className={styles.paragraphStyle}>{props.paragraphContent}</p> : ''}
@@ -20,7 +26,7 @@ const TextBlock = (props) => {
 export default TextBlock;
 
 TextBlock.propTypes = {
-  headingType: PropTypes.string,
+  headingType: PropTypes.bool,
   headingOneContent: PropTypes.string,
   headingTwoContent: PropTypes.string,
   paragraphContent: PropTypes.string,

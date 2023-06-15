@@ -14,6 +14,20 @@
 
 .headingRegular {
     font-size: 1rem;
+    text-align: center;
+}
+
+.headingRegularBold {
+    font-family: var(---montserrat);
+    font-weight: var(---bold);
+}
+
+.headingRegularUppercase {
+    text-transform: uppercase;
+}
+
+.headingRegularJustify {
+    text-align: justify;
 }
 
 .paragraphStyle {

@@ -1,4 +1,5 @@
 import styles from './btn.module.css';
+import propTypes from 'prop-types';
 
 const Btn = (props) => {
     return (
@@ -9,3 +10,8 @@ const Btn = (props) => {
 }
 
 export default Btn;
+
+Btn.propTypes = {
+    space: propTypes.string,
+    btnTitle: propTypes.string
+};

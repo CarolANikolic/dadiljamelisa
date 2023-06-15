@@ -24,3 +24,29 @@
   gap: 1.25rem;
   padding: 1.5rem 1rem;
 }
+
+.containerPrices {
+  width: 248px;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin: 0 auto;
+}
+
+.contactForm {
+  border: 11px solid var(---yellow);
+  background-color: var(---beige);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.sunDrawing {
+  position: absolute;
+  right: 10%;
+  top: 8%;
+}
+
+.drawings {
+ margin: 0 auto;
+}
