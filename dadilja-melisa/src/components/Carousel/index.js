@@ -16,8 +16,8 @@ const Carousel = ({slides, textOne, textTwo}) => {
        onSlideChange={() => console.log('slide change')}
        onSwiper={(swiper) => console.log(swiper)}
       >
-        {slides.map((slide) => (
-           <SwiperSlide key={slide.textTwo}>
+        {slides.map((slide, index) => (
+           <SwiperSlide key={index}>
              <p>{slide[textOne]}</p>
              <p>{slide[textTwo]}</p>
            </SwiperSlide>

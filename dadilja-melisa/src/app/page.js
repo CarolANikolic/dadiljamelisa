@@ -59,8 +59,8 @@ export default function Home() {
             <Image src="/svgs/elements/price-three-kids.svg" width={248} height={225} alt="price for three kids"/>
           </div>
         </section>
-          
-        <Carousel slides={reviews} textOne="testimonial" textTwo="writer"/>
+        
+          <Carousel slides={reviews} textOne="testimonial" textTwo="writer"/>
 
         <div className={styles.containerGap}>
           <TextBlock headingType heading="headingSmaller" headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"/>
