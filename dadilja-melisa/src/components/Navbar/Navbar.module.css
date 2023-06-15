@@ -32,10 +32,6 @@
     margin-top: 5%;
 }
 
-.listItem:visited {
-    color:var(---black);
-}
-
 .listItem:hover {
     border-bottom: 2px solid var(---yellow);
 }
