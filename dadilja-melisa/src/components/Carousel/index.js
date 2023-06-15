@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {Pagination, A11y } from 'swiper';
+import { Pagination, A11y } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import styles from './carousel.module.css'
+import styles from './carousel.module.css';
 
 const Carousel = ({slides, textOne, textTwo}) => {
 
@@ -13,8 +13,6 @@ const Carousel = ({slides, textOne, textTwo}) => {
        pagination={{ clickable: true }}
        spaceBetween={50}
        slidesPerView={1}
-       onSlideChange={() => console.log('slide change')}
-       onSwiper={(swiper) => console.log(swiper)}
       >
         {slides.map((slide, index) => (
            <SwiperSlide key={index} className={styles.slideContainer}>
