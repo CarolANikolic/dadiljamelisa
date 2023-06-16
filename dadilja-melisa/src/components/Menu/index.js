@@ -10,7 +10,7 @@ const Menu = (props) => {
             <div className={styles.bar2}></div>
             <div className={styles.bar3}></div>
         </div>
-        <p>{!menu && props.menuTitle}</p>
+        <p className={styles.menu}>{!menu && props.menuTitle}</p>
     </div>
     )
 };
