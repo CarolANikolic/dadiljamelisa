@@ -48,6 +48,10 @@
         line-height: 3rem
     }
 
+    .headingPlayfullSmaller {
+        font-size: 2.5rem;
+    }
+
     .headingRegularBold {
         width: 620px;
     }

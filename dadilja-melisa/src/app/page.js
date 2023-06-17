@@ -54,9 +54,9 @@ export default function Home() {
           <TextBlock uppercase="uppercase" headingTwoContent="Weekend promotion 24H for EUR 50"/>
 
           <div className={styles.containerPrices}>
-            <Image src="/svgs/elements/price-one-kid.svg" width={248} height={225} alt="price for one kid"/>
-            <Image src="/svgs/elements/price-two-kids.svg" width={248} height={225} alt="price for two kids"/>
-            <Image src="/svgs/elements/price-three-kids.svg" width={248} height={225} alt="price for three kids"/>
+            <Image className={styles.prices} src="/svgs/elements/price-one-kid.svg" width={248} height={225} alt="price for one kid"/>
+            <Image className={styles.prices} src="/svgs/elements/price-two-kids.svg" width={248} height={225} alt="price for two kids"/>
+            <Image className={styles.prices} src="/svgs/elements/price-three-kids.svg" width={248} height={225} alt="price for three kids"/>
           </div>
         </section>
         
