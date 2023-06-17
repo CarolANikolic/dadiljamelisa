@@ -37,3 +37,10 @@
     font-weight: var(---medium);
     text-align: right;
 }
+
+@media (min-width: 481px) and (max-width: 820px) {
+
+    .swiperContainer {
+        width: 620px; 
+    }
+}
