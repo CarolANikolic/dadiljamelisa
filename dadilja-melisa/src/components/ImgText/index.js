@@ -25,8 +25,8 @@ const ImageAndText = ({ source, alt, heading, paragraph, color }) => {
         <div
           className={`${color === 'green' ? styles.green : color === 'yellow' ? styles.yellow : color === 'beige' ? styles.beige : color === 'darkPink' ? styles.darkPink : ''} ${styles.explanationContainer}`}
         >
-          <TextBlock bold="bold" headingTwoContent={heading} />
-          <TextBlock paragraph paragraphContent={paragraph} />
+          <TextBlock bold="bold" headingTwoContent={heading}/>
+          <TextBlock paragraph paragraphContent={paragraph} isCentered={tabletActive}/>
           <Image
             className={`${styles.closeIcon} ${tabletActive && styles.hideCloseIcon}`}
             src="/svgs/icons/chevron-down.svg"

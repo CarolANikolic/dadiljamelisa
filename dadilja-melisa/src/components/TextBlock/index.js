@@ -18,7 +18,7 @@ const TextBlock = (props) => {
       styles.headingRegularUppercase : ''} ${props.align === "justify" ? styles.headingRegularJustify : ''} ${styles.headingRegular}`}>{props.headingTwoContent}</h2>}
       {props.paragraph ? 
       
-      <p className={styles.paragraphStyle}>{props.paragraphContent}</p> : ''}
+      <p className={`${styles.paragraphStyle} ${props.isCentered === true ? styles.centeredText : ''}`}>{props.paragraphContent}</p> : ''}
     </div> 
   );
 }
