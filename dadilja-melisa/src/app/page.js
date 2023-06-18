@@ -42,7 +42,7 @@ export default function Home() {
           <TextBlock paragraph paragraphContent="As an educator, I go beyond traditional childcare. With me, your children thrive through enriching workshops, tailored educational programs, fun-filled sports activities, and exciting field trips. Trust me to care for your children and educate and empower them for a bright future."/>
         </section>
 
-        <section>
+        <section className={styles.containerGap}>
           {activitiesImg.map((activity, index) =>  
             <ImgText key={index} {...activity}/> 
             )
@@ -89,7 +89,7 @@ export default function Home() {
 
             <Button space="btnOutSpace" btnTitle="Scheduele"/>
 
-            <Image className={styles.drawings} src="/svgs/elements/drawings.svg" width={300} height={100} alt="girl drawing"></Image>
+            <Image className={styles.drawings} src="/svgs/elements/drawings.svg" width={300} height={100} alt="drawings"></Image>
         </form>
 
         <section className={styles.containerGap}>

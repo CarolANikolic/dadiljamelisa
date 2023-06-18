@@ -57,6 +57,11 @@
 
 @media (min-width: 481px) and (max-width: 820px) {
 
+  .containerGap {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .containerPrices {
     flex-direction: row;
     gap: 0;

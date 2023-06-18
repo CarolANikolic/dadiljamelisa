@@ -3,7 +3,7 @@ const activitiesImg = [
         source: "/svgs/elements/activity-one.svg",
         alt: "creativity and imagination",
         heading: "Elevate Your Child's Learning Experience with Our Enriching Workshops",
-        paragraph: "Read My workshops are designed to foster your child's creativity and imagination while honing their fine motor skills through engaging activities with unstructured and semi-structured materials. Your child will be encouraged to explore their interests and develop their skills in a supportive and nurturing environment.",
+        paragraph: "My workshops are designed to foster your child's creativity and imagination while honing their fine motor skills through engaging activities with unstructured and semi-structured materials. Your child will be encouraged to explore their interests and develop their skills in a supportive and nurturing environment.",
         color: "green"
     },
     {
