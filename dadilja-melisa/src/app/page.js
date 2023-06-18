@@ -11,8 +11,14 @@ import CalendarInput from '@/components/Calendar';
 import activitiesImg from '@/assets/objects/activitiesImg';
 import Carousel from '@/components/Carousel';
 import reviews from '@/assets/objects/reviews';
+import { useState } from 'react';
+import checkScreenSize from '@/assets/functions/checkScreenSize';
 
 export default function Home() {
+  const [tabletActive, setTabletActive] = useState(false);
+
+//   Call useEffect function tohandle screen resizing for responsiveness - Tablet
+  checkScreenSize(481, 820, setTabletActive);
   return (
     <main className={styles.main}>
         <Navbar/>
@@ -94,8 +100,8 @@ export default function Home() {
 
         <section className={styles.containerGap}>
           <TextBlock headingType heading="headingPlayfullSmaller" headingOneContent="Let me provide exceptional care for your child while you enjoy a well-deserved break!"/>
-          <TextBlock bold="bold" headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."/>
-          <TextBlock bold="bold" headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
+          <TextBlock bold="bold" hasSmallerWidth={tabletActive} headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."/>
+          <TextBlock bold="bold" hasSmallerWidth={tabletActive} headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"/>
         </section>
 
 

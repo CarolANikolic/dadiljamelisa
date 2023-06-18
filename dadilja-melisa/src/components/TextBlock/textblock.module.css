@@ -65,4 +65,8 @@
     .centeredText {
         text-align: center;
     }
+
+    .tabletWidth {
+        width: 80%;
+    }
 }

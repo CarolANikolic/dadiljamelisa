@@ -15,7 +15,7 @@ const TextBlock = (props) => {
       <h2 className={`${props.bold === 'bold' ? 
       styles.headingRegularBold : 
       props.uppercase === 'uppercase' ? 
-      styles.headingRegularUppercase : ''} ${props.align === "justify" ? styles.headingRegularJustify : ''} ${styles.headingRegular}`}>{props.headingTwoContent}</h2>}
+      styles.headingRegularUppercase : ''} ${props.align === "justify" ? styles.headingRegularJustify : ''} ${styles.headingRegular} ${props.hasSmallerWidth === true ? styles.tabletWidth : ''}`}>{props.headingTwoContent}</h2>}
       {props.paragraph ? 
       
       <p className={`${styles.paragraphStyle} ${props.isCentered === true ? styles.centeredText : ''}`}>{props.paragraphContent}</p> : ''}
@@ -30,7 +30,8 @@ TextBlock.propTypes = {
   headingOneContent: PropTypes.string,
   headingTwoContent: PropTypes.string,
   paragraphContent: PropTypes.string,
-  heading: PropTypes.string
+  heading: PropTypes.string,
+  isCentered: PropTypes.bool
 
 };
 
