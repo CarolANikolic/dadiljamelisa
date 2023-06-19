@@ -25,7 +25,7 @@ export default function Home() {
 
         <section id="home">
           <div className={`${styles.imgContainer} ${styles.imgContainerDimensions}`}>
-            <Image className={styles.image} src="/svgs/photos/kids.svg" width={100} height={100} alt="happy kids"/>
+            <Image className={styles.imagePhoto} src="/svgs/photos/kids.svg" width={100} height={100} alt="happy kids"/>
           </div>
 
           <div className={styles.containerGap}>
@@ -41,7 +41,7 @@ export default function Home() {
 
         <section className={styles.containerGap} id="about">
           <div className={styles.imgContainerDimensions}>
-            <Image className={styles.image} src="/svgs/photos/melisa.svg"  width={100} height={100} alt="melisas's profile"/>
+            <Image className={styles.imagePhoto} src="/svgs/photos/melisa.svg"  width={100} height={100} alt="melisas's profile"/>
           </div>
           
           <TextBlock bold="bold" align="justify" headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."/>
@@ -75,27 +75,26 @@ export default function Home() {
         <div className={styles.containerGap} id="contact">
           <TextBlock headingType heading="headingSmaller" headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"/>
         </div>
-
-        <form className={styles.contactForm}>
-          <div>
+        
+        <form id="test" className={`${!tabletActive ? styles.contactForm : styles.tabletForm}`}>
+          <div className={styles.tabletContainer}>
             <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
             <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>  
 
-            <Input user generalInput name="Name" type="text" placeholder="Ana Petrović"/>
-            <Input phone generalInput name="Phone" type="tel" placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
-            <Input mail generalInput name="Email" type="email" placeholder="email@email.com"/>
-          </div>
-
-          <div>
-            <CalendarInput labelName="Starting date" name="startDate"/>
-            <CalendarInput labelName="Ending date" name="endDate"/>
+            <Input user generalInput name="Name" type="text" isTablet={tabletActive} placeholder="Ana Petrović"/>
+            <Input phone generalInput name="Phone" type="tel" isTablet={tabletActive} placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
+            <Input mail generalInput name="Email" type="email" isTablet={tabletActive} placeholder="email@email.com"/>
+         
+            <CalendarInput labelName="Starting date" name="startDate" isTablet={tabletActive}/>
+            <CalendarInput labelName="Ending date" name="endDate" isTablet={tabletActive}/>
 
             <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
           </div>
 
             <Button space="btnOutSpace" btnTitle="Scheduele"/>
 
-            <Image className={styles.drawings} src="/svgs/elements/drawings.svg" width={300} height={100} alt="drawings"></Image>
+            <Image className={styles.drawings} 
+            src={`${tabletActive ? "/svgs/elements/drawings-tablet.svg" : "/svgs/elements/drawings.svg"}`} width={300} height={100} alt="drawings"></Image>
         </form>
 
         <section className={styles.containerGap}>

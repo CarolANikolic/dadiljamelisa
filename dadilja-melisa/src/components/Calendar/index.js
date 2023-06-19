@@ -23,7 +23,7 @@ const CalendarInput = (props) => {
           minDate={new Date()} // only shows the dates from current date and future, not the past.
           onChange={date => setSelectedDate(date)} //is set to a function that will be executed when the user changes or selects a date. The function receives an argument (in this case, named date). Whenever the user selects a new date, the onChange function updates the selectedDate by calling setSelectedDate function, passing the date argument as the new value to update the selectedDate variable.      
           placeholderText={currentDate}
-          className={styles.inputField} // Apply a custom CSS class for styling
+          className={`${styles.inputField} ${props.isTablet === true ? styles.tabletCalendar: ''}`} // Apply a custom CSS class for styling
           calendarClassName={styles.datepickerCalendar}// Apply a custom CSS class for the calendar container
         />
       </div>

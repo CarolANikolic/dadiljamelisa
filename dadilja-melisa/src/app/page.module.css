@@ -13,7 +13,7 @@
   height: 300px;
 }
 
-.image {
+.imagePhoto {
   width: 286px;
   height: 286px;
 }
@@ -73,4 +73,25 @@
     max-width: 230px;
     align-items: flex-end;
   }
+
+  .tabletForm {
+    border: 11px solid var(---yellow);
+    background-color: var(---beige);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1.25rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .drawings {
+    width: 100%;
+   }
+
+  .tabletContainer {
+    width: 100%;
+    justify-content: center;
+}
+
 }
