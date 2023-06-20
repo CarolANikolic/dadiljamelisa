@@ -35,7 +35,7 @@ export default function Home() {
             
             <TextBlock headingType heading="headingSmaller" headingOneContent="The only nanny and educator that offers a 24h care service in Belgrade!"/>
 
-            <Button space="btnOutSpace" link="addLink" linkId="#form"  btnTitle="Scheduele"/>
+            <Button space="btnOutSpace" link="addLink" linkId="#form"  btnTitle="Get in touch"/>
           </div>
         </section>
 
