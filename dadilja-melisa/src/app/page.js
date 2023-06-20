@@ -13,6 +13,7 @@ import Carousel from '@/components/Carousel';
 import reviews from '@/assets/objects/reviews';
 import { useState } from 'react';
 import checkScreenSize from '@/assets/functions/checkScreenSize';
+import sendEmail from '@/assets/functions/sendEmail';
 
 export default function Home() {
   const [tabletActive, setTabletActive] = useState(false);
@@ -76,7 +77,7 @@ export default function Home() {
           <TextBlock headingType heading="headingSmaller" headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"/>
         </div>
         
-        <form id="form" className={`${!tabletActive ? styles.contactForm : styles.tabletForm}`}>
+        <form id="form" className={`${!tabletActive ? styles.contactForm : styles.tabletForm}`} onSubmit={sendEmail}>
           <div className={styles.tabletContainer}>
             <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
             <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>  
@@ -85,8 +86,8 @@ export default function Home() {
             <Input phone generalInput name="Phone" type="tel" isTablet={tabletActive} placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
             <Input mail generalInput name="Email" type="email" isTablet={tabletActive} placeholder="email@email.com"/>
          
-            <CalendarInput labelName="Starting date" name="startDate" isTablet={tabletActive}/>
-            <CalendarInput labelName="Ending date" name="endDate" isTablet={tabletActive}/>
+            <CalendarInput labelName="Starting date" name="startDate" isTablet={tabletActive} testContent="test"/>
+            <CalendarInput labelName="Ending date" name="endDate" isTablet={tabletActive} testContent="test"/>
 
             <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
           </div>
