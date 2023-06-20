@@ -35,7 +35,7 @@ export default function Home() {
             
             <TextBlock headingType heading="headingSmaller" headingOneContent="The only nanny and educator that offers a 24h care service in Belgrade!"/>
 
-            <Button space="btnOutSpace" btnTitle="Scheduele"/>
+            <Button space="btnOutSpace" link="addLink" linkId="#form"  btnTitle="Scheduele"/>
           </div>
         </section>
 
@@ -76,7 +76,7 @@ export default function Home() {
           <TextBlock headingType heading="headingSmaller" headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"/>
         </div>
         
-        <form id="test" className={`${!tabletActive ? styles.contactForm : styles.tabletForm}`}>
+        <form id="form" className={`${!tabletActive ? styles.contactForm : styles.tabletForm}`}>
           <div className={styles.tabletContainer}>
             <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
             <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>  
