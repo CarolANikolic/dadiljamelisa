@@ -6,13 +6,13 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import ImgText from '@/components/ImgText';
 import Footer from '@/components/Footer';
-import Input from '@/components/Input';
-import CalendarInput from '@/components/Calendar';
 import activitiesImg from '@/assets/objects/activitiesImg';
 import Carousel from '@/components/Carousel';
 import reviews from '@/assets/objects/reviews';
 import { useState } from 'react';
 import checkScreenSize from '@/assets/functions/checkScreenSize';
+import Form from '@/components/Form/Form';
+import sendEmail from '@/assets/functions/sendEmail'
 
 export default function Home() {
   const [tabletActive, setTabletActive] = useState(false);
@@ -75,27 +75,46 @@ export default function Home() {
         <div className={styles.containerGap} id="contact">
           <TextBlock headingType heading="headingSmaller" headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"/>
         </div>
+
+
+        <Form 
+        tabletActive={tabletActive} 
+        imgOnePath="/svgs/elements/girl-drawing.svg"
+        imgOneAlt="girl drawing"
+
+        imgTwoPath="/svgs/elements/sun.svg"
+        imgTwoAlt="girl drawing"
+
+        inputOneName="Name"
+        inputOneType="text"
+        inputOnePlaceholder="Ana Petrović"
         
-        <form id="form" className={`${!tabletActive ? styles.contactForm : styles.tabletForm}`}>
-          <div className={styles.tabletContainer}>
-            <Image src="/svgs/elements/girl-drawing.svg" width={195} height={127} alt="girl drawing"></Image>
-            <Image className={styles.sunDrawing} src="/svgs/elements/sun.svg" width={71} height={65} alt="girl drawing"></Image>  
-
-            <Input user generalInput name="Name" type="text" isTablet={tabletActive} placeholder="Ana Petrović"/>
-            <Input phone generalInput name="Phone" type="tel" isTablet={tabletActive} placeholder="064/0888-888" patternExist="true" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/>
-            <Input mail generalInput name="Email" type="email" isTablet={tabletActive} placeholder="email@email.com"/>
-         
-            <CalendarInput labelName="Starting date" name="startDate" isTablet={tabletActive}/>
-            <CalendarInput labelName="Ending date" name="endDate" isTablet={tabletActive}/>
-
-            <Input messageBox messageName="Message" placeholder="Hi Melisa, I want to schedule a weekend care for my kid!"/>
-          </div>
-
-            <Button space="btnOutSpace" btnTitle="Scheduele"/>
-
-            <Image className={styles.drawings} 
-            src={`${tabletActive ? "/svgs/elements/drawings-tablet.svg" : "/svgs/elements/drawings.svg"}`} width={300} height={100} alt="drawings"></Image>
-        </form>
+        inputTwoName="Phone"
+        inputTwoType="tel"
+        inputTwoPlaceholder="064/0888-888"
+        
+        inputThreeName="Email"
+        inputThreeType="email"
+        inputThreeePlaceholder="email@email.com"
+        
+        calendarOneLabel="Starting date"
+        calendarOneName="startDate"
+        
+        calendarTwoLabel="Ending date"
+        calendarTwoName="endDate"
+        
+        inputFourLabel="Message"
+        inputFourPlaceholder="Hi Melisa, I want to schedule a weekend care for my kid!"
+        
+        btnContainer="btnOutSpace"
+        btnTitle="Scheduele"
+        btnAction={sendEmail}
+        
+        bottomImgTablet="/svgs/elements/drawings-tablet.svg"
+        bottomImgMobile="/svgs/elements/drawings.svg"
+        bottomImgAlt="drawings"
+        />
+  
 
         <section className={styles.containerGap}>
           <TextBlock headingType heading="headingPlayfullSmaller" headingOneContent="Let me provide exceptional care for your child while you enjoy a well-deserved break!"/>
