@@ -34,7 +34,7 @@
     position: absolute;
 }
 
-@media (min-width: 481px) and (max-width: 820px) {
+@media (min-width: 481px) {
 
     .allMenu {
         display: none;
