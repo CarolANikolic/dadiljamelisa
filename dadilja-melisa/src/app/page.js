@@ -18,19 +18,22 @@ import scheduleFormInput from "@/assets/objects/scheduleFormInput";
 
 export default function Home() {
 	const [tabletActive, setTabletActive] = useState(false);
+	const [desktopActive, setDesktopActive] = useState(false);
 
 	//   Call useEffect function tohandle screen resizing for responsiveness - Tablet
-	useCheckScreenSize(481, 820, setTabletActive);
+	useCheckScreenSize(480, 820, setTabletActive);
+	useCheckScreenSize(821, 9000, setDesktopActive);
+
 	return (
 		<main className={styles.main}>
 			<Navbar />
 
-			<section id="home">
+			<section id="home" className={styles.desktopIntro}>
 				<div
 					className={`${styles.imgContainer} ${styles.imgContainerDimensions}`}
 				>
 					<Image
-						className={styles.imagePhoto}
+						className={styles.kidsPhoto}
 						src="/svgs/photos/kids.svg"
 						width={100}
 						height={100}
@@ -38,24 +41,35 @@ export default function Home() {
 					/>
 				</div>
 
-				<div className={styles.containerGap}>
+				<div className={`${styles.containerGap} ${desktopActive ? styles.introInfoDesktop : ''}`}>
 					<TextBlock
 						headingType
 						heading="headingBig"
 						headingOneContent="Your Trusted Educator and Nanny for a Relaxing Weekend Without Children!"
 					/>
-
+				
+					{!desktopActive ? 
+					<>
 					<TextBlock
 						paragraph
+						
 						paragraphContent="Are you craving a much-needed break? Whether you have obligations to attend to, want to enjoy a night out with friends, or simply need time to rest and recharge, I have you covered. I'm Melisa, a professional and experienced caregiver. With my 24-hour babysitting services you can enjoy a worry-free break. Comprehensive Development: I offer a diverse range of activities, workshops, and educational subjects, ensuring your child's holistic growth. Nurturing Environment:  My work is based on creating a supportive and inclusive space, fostering positive social connections and valuable mentorship. Collaborative Learning: I encourage siblings to learn from each other, build friendships, and inspire one another, fostering a supportive and enriching environment."
 					/>
-
+					
 					<TextBlock
 						headingType
 						heading="headingSmaller"
 						headingOneContent="The only nanny and educator that offers a 24h care service in Belgrade!"
 					/>
-
+					</>
+					 : 
+						<TextBlock
+						paragraph
+						isCentered={desktopActive}
+						paragraphContent="Are you craving a much-needed break? Whether you have obligations to attend to, want to enjoy a night out with friends, or simply need time to rest and recharge, I have you covered. I'm Melisa, a professional and experienced caregiver. With my 24-hour babysitting services you can enjoy a worry-free break."
+					/>
+					}
+			
 					<Button
 						space="btnOutSpace"
 						link="addLink"
@@ -63,6 +77,33 @@ export default function Home() {
 						btnTitle="Scheduele"
 					/>
 				</div>
+			</section>
+			
+			<section className={`${styles.containerGap} ${desktopActive ? styles.sectionDesktop : ''}`}>
+
+				{desktopActive && 
+
+				<>
+					<TextBlock
+					headingType
+					heading="headingBig"
+					headingOneContent="Nurturing all-round development for your child's flourishing future."
+					/>	
+					
+					<TextBlock
+					paragraph
+					paragraphContent="I prioritize the well-being and development of your child in a nurturing environment where your child can thrive. From creative workshops that encourage imagination and fine motor skills, to an educational program covering various subjects like math, speech, environment, music, physics, and art, to engaging sports activities such as relay games, competitive games, polygons, story polygons, and dance activities - your child will have a well-rounded experience. I also offer the opportunity for field trips and visits to local communities, such as museums and theatres, to broaden your child's horizons and provide enriching experiences.
+					By facilitating interactions between children of different ages, I encourage positive social interactions and provide opportunities for older children to mentor and inspire their younger siblings. This creates a supportive and inclusive environment where children learn from each other, build friendships, and develop valuable social skills."
+					/>
+
+					<TextBlock
+					headingType
+					heading="headingBig"
+					headingOneContent="The only nanny and educator that offers a 24h care service in Belgrade!"
+					/>	
+				</>
+				}
+
 			</section>
 
 			<section className={styles.containerGap} id="about">

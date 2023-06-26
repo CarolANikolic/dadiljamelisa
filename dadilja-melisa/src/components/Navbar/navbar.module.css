@@ -98,11 +98,12 @@
 @media (min-width: 821px) {
     .selectLng {
         top: 1rem;
+		right: 2rem;
     }
 
     .listContainer {
         min-height: 2rem;
-		background-color: var(---lightPink);
+		background-color: var(---white);
     }
 
     .list {

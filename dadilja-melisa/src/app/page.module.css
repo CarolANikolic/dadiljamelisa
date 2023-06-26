@@ -13,6 +13,11 @@
   height: 300px;
 }
 
+.kidsPhoto {
+  width: 286px;
+  height: 286px;
+}
+
 .imagePhoto {
   width: 286px;
   height: 286px;
@@ -62,9 +67,41 @@
 }
 
 @media (min-width: 821px) {
+  
+  .containerGap {
+    gap: 2rem;
+  }
+
+  .desktopIntro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(---lightPink);
+    padding: 2rem 1.5rem;
+  }
+
+  .introInfoDesktop {
+      background-color: var(---beige);
+      gap: 1.25rem;
+      padding: 1.5rem 1rem;
+      justify-content: center;
+  }
 
   .imgContainer {
     background-color: var(---lightPink);
   } 
+
+  .imgContainerDimensions {
+    height: 500px;
+  }
+
+  .kidsPhoto {
+    width: 600px;
+    height: 500px; 
+  }
+
+  .sectionDesktop {
+    width: 80%;
+    margin: 0 auto;
+  }
 
 }

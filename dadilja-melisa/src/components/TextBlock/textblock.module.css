@@ -26,13 +26,16 @@
     text-transform: uppercase;
 }
 
-.headingRegularJustify {
-    text-align: justify;
-}
-
 .paragraphStyle {
     font-size: .875rem;
     line-height: 1.5rem;
+}
+
+.centeredText {
+    text-align: center;
+}
+
+.justifyedText {
     text-align: justify;
 }
 
@@ -62,11 +65,13 @@
         margin: 0 auto;
     }
 
-    .centeredText {
-        text-align: center;
-    }
-
     .tabletWidth {
         width: 80%;
+    }
+}
+
+@media (min-width: 821px) {
+    .paragraphStyle {
+        font-size: 1rem;
     }
 }

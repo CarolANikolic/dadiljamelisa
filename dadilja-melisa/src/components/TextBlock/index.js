@@ -15,10 +15,10 @@ const TextBlock = (props) => {
       <h2 className={`${props.bold === 'bold' ? 
       styles.headingRegularBold : 
       props.uppercase === 'uppercase' ? 
-      styles.headingRegularUppercase : ''} ${props.align === "justify" ? styles.headingRegularJustify : ''} ${styles.headingRegular} ${props.hasSmallerWidth === true ? styles.tabletWidth : ''}`}>{props.headingTwoContent}</h2>}
+      styles.headingRegularUppercase : ''} ${props.align === "justify" ? styles.justifyedText : ''} ${styles.headingRegular} ${props.hasSmallerWidth === true ? styles.tabletWidth : ''}`}>{props.headingTwoContent}</h2>}
       {props.paragraph ? 
       
-      <p className={`${styles.paragraphStyle} ${props.isCentered === true ? styles.centeredText : ''}`}>{props.paragraphContent}</p> : ''}
+      <p className={`${styles.paragraphStyle} ${props.isCentered === true ? styles.centeredText :  styles.justifyedText}`}>{props.paragraphContent}</p> : ''}
     </div> 
   );
 }
