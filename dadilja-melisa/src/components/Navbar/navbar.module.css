@@ -102,6 +102,7 @@
 
     .listContainer {
         min-height: 2rem;
+		background-color: var(---lightPink);
     }
 
     .list {

@@ -60,3 +60,11 @@
     align-items: flex-end;
   }
 }
+
+@media (min-width: 821px) {
+
+  .imgContainer {
+    background-color: var(---lightPink);
+  } 
+
+}
