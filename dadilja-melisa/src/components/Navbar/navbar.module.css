@@ -76,12 +76,14 @@
 /* Tablet screen */
 
 @media (min-width: 481px) and (max-width: 820px) {
+
 	.selectLng {
 		top: 1rem;
 	}
 
 	.listContainer {
 		min-height: 2rem;
+		background-color: var(---lightPink);
 	}
 
 	.list {
