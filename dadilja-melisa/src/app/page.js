@@ -133,10 +133,21 @@ export default function Home() {
 			</section>
 
 			<section className={styles.containerGap}>
-				{activitiesImg.map((activity, index) => (
-					<ImgText key={index} tabletActive={tabletActive} {...activity} />
-				))}
+				{!desktopActive && (
+					
+					<>
+					{activitiesImg.map((activity, index) => (
+						<ImgText key={index} tabletActive={tabletActive} {...activity} />
+					))}
+					</>
+					
+				)}				
 			</section>
+			
+			{desktopActive && (
+				<Carousel  slides={activitiesImg}/>
+
+			)}
 
 			<section className={styles.containerGap} id="prices">
 				<TextBlock
@@ -188,8 +199,9 @@ export default function Home() {
 					alt="logo without brand name"
 				></Image>
 			</section>
-			<Carousel slides={reviews} textOne="testimonial" textTwo="writer" />
 
+			<Carousel carouselText slides={reviews} textOne="testimonial" textTwo="writer" />
+			
 			<div className={styles.containerGap} id="contact">
 				<TextBlock
 					headingType
