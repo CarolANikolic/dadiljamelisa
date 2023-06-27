@@ -106,8 +106,9 @@ export default function Home() {
 
 			</section>
 
-			<section className={styles.containerGap} id="about">
-				<div className={styles.imgContainerDimensions}>
+			<section className={desktopActive ? styles.aboutSectiondesktop : styles.containerGap} id="about">
+				<div className={desktopActive ? styles.aboutDesktop : styles.imgContainerDimensions}>
+				
 					<Image
 						className={styles.imagePhoto}
 						src="/svgs/photos/melisa.svg"
@@ -117,15 +118,18 @@ export default function Home() {
 					/>
 				</div>
 
-				<TextBlock
-					bold="bold"
-					align="justify"
-					headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."
-				/>
-				<TextBlock
-					paragraph
-					paragraphContent="As an educator, I go beyond traditional childcare. With me, your children thrive through enriching workshops, tailored educational programs, fun-filled sports activities, and exciting field trips. Trust me to care for your children and educate and empower them for a bright future."
-				/>
+				<div className={styles.aboutText}>
+					<TextBlock
+						bold="bold"
+						align="justify"
+						headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."
+					/>
+					<TextBlock
+						paragraph
+						paragraphContent="As an educator, I go beyond traditional childcare. With me, your children thrive through enriching workshops, tailored educational programs, fun-filled sports activities, and exciting field trips. Trust me to care for your children and educate and empower them for a bright future."
+					/>
+				</div>
+			
 			</section>
 
 			<section className={styles.containerGap}>
