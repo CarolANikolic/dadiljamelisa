@@ -134,7 +134,7 @@ export default function Home() {
 
 			<section className={styles.containerGap}>
 				{activitiesImg.map((activity, index) => (
-					<ImgText key={index} {...activity} />
+					<ImgText key={index} tabletActive={tabletActive} {...activity} />
 				))}
 			</section>
 

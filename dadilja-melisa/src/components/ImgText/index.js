@@ -2,19 +2,14 @@ import Image from "next/image";
 import styles from "./imgText.module.css";
 import TextBlock from "../TextBlock";
 import { useState } from "react";
-import useCheckScreenSize from "@/hooks/useCheckScreenSize";
 
-const ImageAndText = ({ source, alt, heading, paragraph, color }) => {
+const ImageAndText = ({ source, alt, heading, paragraph, color, ...props }) => {
 	const [showText, setShowText] = useState(false);
-	const [tabletActive, setTabletActive] = useState(false);
-
-	//   Call useEffect function tohandle screen resizing for responsiveness - Tablet
-	useCheckScreenSize(481, 820, setTabletActive);
 
 	return (
 		<div
 			className={`${styles.container} ${
-				tabletActive && styles.tabletExplanationContainer
+				props.tabletActive && styles.tabletExplanationContainer
 			} `}
 		>
 			<div className={styles.activityImgContainer}>
@@ -28,7 +23,7 @@ const ImageAndText = ({ source, alt, heading, paragraph, color }) => {
 
 				<div
 					className={`${styles.content} ${
-						(!showText || tabletActive) && styles.active
+						(!showText || props.tabletActive) && styles.active
 					}`}
 					onClick={() => setShowText(true)}
 				>
@@ -36,7 +31,7 @@ const ImageAndText = ({ source, alt, heading, paragraph, color }) => {
 				</div>
 			</div>
 
-			{(showText || tabletActive) && (
+			{(showText || props.tabletActive) && (
 				<div
 					className={`${
 						color === "green"
@@ -54,11 +49,11 @@ const ImageAndText = ({ source, alt, heading, paragraph, color }) => {
 					<TextBlock
 						paragraph
 						paragraphContent={paragraph}
-						isCentered={tabletActive}
+						isCentered={props.tabletActive}
 					/>
 					<Image
 						className={`${styles.closeIcon} ${
-							tabletActive && styles.hideCloseIcon
+							props.tabletActive && styles.hideCloseIcon
 						}`}
 						src="/svgs/icons/chevron-down.svg"
 						width={40}
