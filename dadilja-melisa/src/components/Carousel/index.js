@@ -28,10 +28,7 @@ const Carousel = ({slides, ...props}) => {
           ) : (
            
             <>
-           
-              {slides.map((slide, index) => (
-                <ImageAndText key={index} desktopActive={props.desktop} {...slide}/>
-              ))}
+                <ImageAndText desktopActive={props.desktopActive} key={index} {...slide}/>
             </>
           )}
         </SwiperSlide>

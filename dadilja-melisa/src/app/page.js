@@ -145,7 +145,7 @@ export default function Home() {
 			</section>
 			
 			{desktopActive && (
-				<Carousel  slides={activitiesImg}/>
+				<Carousel desktopActive={desktopActive} slides={activitiesImg}/>
 
 			)}
 
