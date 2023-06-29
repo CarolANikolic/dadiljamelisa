@@ -37,3 +37,28 @@
         width: 100%;
     }
 }
+
+@media (min-width: 821px) {
+
+    .contactForm {
+        width: 80%;
+        margin: 0 auto;   
+    }
+
+   /* Add a new CSS class for the two-block layout */
+.formContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+  }
+  
+  .formFirstBlock {
+    grid-column: 1;
+  }
+
+  .formSecondBlock {
+      grid-column: 2;
+  }
+  
+}

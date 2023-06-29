@@ -28,7 +28,17 @@ const Form = ({ children, ...props }) => {
 					alt="girl drawing"
 				></Image>
 
-				{children}
+<div className={styles.formContainer}>
+          {/* First block with 3 inputs */}
+          <div className={styles.formBlock}>
+            {children.slice(0, 3)} {/* Render the first 3 children */}
+          </div>
+
+          {/* Second block with 3 inputs */}
+          <div className={styles.formTest}>
+            {children.slice(3, 7)} {/* Render the remaining 3 children */}
+          </div>
+        </div>
 			</div>
 
 			<Button space="btnOutSpace" btnTitle="Scheduele" type="submit" />
