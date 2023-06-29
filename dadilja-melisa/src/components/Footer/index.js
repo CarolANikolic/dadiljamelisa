@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./footer.module.css";
+import PropTypes from 'prop-types';
 
-const Footer = () => {
+const Footer = (props) => {
     const emailTitle = "Schedule a weekend care";
     const mailtoUrl = `mailto:mailto:dadiljamelisa@gmail.com?subject=${encodeURIComponent(emailTitle)}`;
     const telNumber = `tel:+381-064-0808-316`;
@@ -10,6 +11,12 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <Image className={styles.logo} src="/svgs/logo/logo-vertical.svg" width={149} height={103} alt="Dadilja Melisa logo in vertical"/>
+            
+            {props.desktopActive && (
+                <div className={styles.footerExtraInfo}>
+                    <p>24/7 Safe and Nurturing Child Care: At my facility or your home.</p>
+                </div>
+            )}
 
             <div className={styles.footerText}>
                 <div className={styles.block}>
@@ -48,3 +55,7 @@ const Footer = () => {
 };
 
 export default Footer
+
+Footer.propTypes = {
+    desktopActive: PropTypes.bool
+}

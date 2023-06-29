@@ -265,7 +265,7 @@ export default function Home() {
 				/>
 			</section>
 
-			<Footer />
+			<Footer desktopActive={desktopActive}/>
 		</main>
 	);
 }
