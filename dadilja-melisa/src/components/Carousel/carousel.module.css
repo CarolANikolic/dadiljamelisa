@@ -44,3 +44,10 @@
         width: 620px; 
     }
 }
+
+@media (min-width: 821px) {
+   .swiperContainer {
+       width: 80%;
+       margin: 0 auto;
+   }
+}
