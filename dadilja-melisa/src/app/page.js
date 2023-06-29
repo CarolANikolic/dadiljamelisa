@@ -247,7 +247,7 @@ export default function Home() {
 				})}
 			</Form>
 
-			<section className={styles.containerGap}>
+			<section className={`${styles.containerGap} ${styles.lastSection}`}>
 				<TextBlock
 					headingType
 					heading="headingPlayfullSmaller"
