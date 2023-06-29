@@ -46,19 +46,28 @@
     }
 
    /* Add a new CSS class for the two-block layout */
-.formContainer {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
-  }
-  
-  .formFirstBlock {
-    grid-column: 1;
-  }
+    .formContainer {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+    }
+    
+    .formFirstBlock {
+        grid-column: 1;
+    }
 
-  .formSecondBlock {
-      grid-column: 2;
-  }
+    .formSecondBlock {
+        grid-column: 2;
+    }
+
+    .desktopDrawingsContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .drawings {
+        margin: 0;
+    }
   
 }

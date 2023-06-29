@@ -43,17 +43,44 @@ const Form = ({ children, ...props }) => {
 
 			<Button space="btnOutSpace" btnTitle="Scheduele" type="submit" />
 
-			<Image
-				className={styles.drawings}
-				src={`${
-					props.tabletActive
-						? "/svgs/elements/drawings-tablet.svg"
-						: "/svgs/elements/drawings.svg"
-				}`}
-				width={300}
-				height={100}
-				alt="drawings"
-			></Image>
+			{props.desktopActive ? (
+				<div className={styles.desktopDrawingsContainer}>
+					<Image
+					className={styles.drawings}
+					src="/svgs/elements/drawings-desktop-one.svg"
+					width={300}
+					height={100}
+					alt="drawings for desktop one"
+					/>
+
+					<Image
+					className={styles.drawings}
+					src="/svgs/elements/drawings-desktop-two.svg"
+					width={300}
+					height={100}
+					alt="drawings for desktop two"
+					/>
+				</div>
+
+				) : props.tabletActive ? (
+				<Image
+					className={styles.drawings}
+					src="/svgs/elements/drawings-tablet.svg"
+					width={300}
+					height={100}
+					alt="drawings"
+				/>
+				
+				) : (
+				<Image
+					className={styles.drawings}
+					src="/svgs/elements/drawings.svg"
+					width={300}
+					height={100}
+					alt="drawings"
+				/>
+				)}
+
 		</form>
 	);
 };

@@ -212,6 +212,7 @@ export default function Home() {
 
 			<Form
 				tabletActive={tabletActive}
+				desktopActive={desktopActive}
 				onSubmit={(event) => {
 					event.preventDefault();
 
