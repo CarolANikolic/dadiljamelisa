@@ -3,6 +3,7 @@ import styles from "./input.module.css";
 import PropTypes from "prop-types";
 
 const Input = (props) => {
+
 	return (
 		<div className={styles.inputContainer}>
 			{props.type === "textarea" ? (
@@ -16,6 +17,7 @@ const Input = (props) => {
 						onChange={(event) => props.handleChange(event.target.value)}
 						rows="4"
 						cols="30"
+						required
 					></textarea>
 				</div>
 			) : props.type === "date" ? (
@@ -45,6 +47,7 @@ const Input = (props) => {
 						onChange={(event) => props.handleChange(event.target.value)}
 						required
 					></input>
+					<span className="error-message"></span>
 				</div>
 			)}
 		</div>

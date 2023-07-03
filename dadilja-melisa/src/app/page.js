@@ -15,6 +15,7 @@ import sendEmail from "@/assets/functions/sendEmail";
 import useCheckScreenSize from "@/hooks/useCheckScreenSize";
 import Input from "@/components/Input";
 import scheduleFormInput from "@/assets/objects/scheduleFormInput";
+import validateInput from "@/assets/functions/validateInput";
 
 export default function Home() {
 	const [tabletActive, setTabletActive] = useState(false);
@@ -226,10 +227,12 @@ export default function Home() {
 					};
 
 					sendEmail(message);
+
 				}}
 			>
 				{scheduleFormInput.map((input, index) => {
 					return (
+					
 						<Input
 							key={index}
 							name={input.inputName}
@@ -240,8 +243,9 @@ export default function Home() {
 							validation={input.validation}
 							validationMessage={input.validationMessage}
 							handleChange={(value) => {
-								input.value = value;
+								input.value = value	
 							}}
+							
 						/>
 					);
 				})}
