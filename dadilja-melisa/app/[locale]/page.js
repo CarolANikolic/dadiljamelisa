@@ -14,12 +14,11 @@ import Form from "./components/Form/Form";
 import sendEmail from "./assets/functions/sendEmail";
 import useCheckScreenSize from "./hooks/useCheckScreenSize";
 import Input from "./components/Input";
-import scheduleFormInput from "./assets/objects/scheduleFormInput"; 
-import {useTranslations} from "next-intl";
-import Link from 'next-intl/link';
+import scheduleFormInput from "./assets/objects/scheduleFormInput";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
-	const t = useTranslations('Index');
+	const t = useTranslations("Index");
 
 	const [tabletActive, setTabletActive] = useState(false);
 	const [desktopActive, setDesktopActive] = useState(false);
@@ -30,12 +29,13 @@ export default function Home() {
 
 	return (
 		<main className={styles.main}>
+			<Navbar
+				linkOne={t("linkOne")}
+				linkTwo={t("linkTwo")}
+				linkThree={t("linkThree")}
+				linkFour={t("linkFour")}
+			/>
 
-			<Navbar linkOne={t("linkOne")} 
-					linkTwo={t("linkTwo")} 
-					linkThree={t("linkThree")} 
-					linkFour={t("linkFour")}/>
-			
 			<section id="home" className={styles.desktopIntro}>
 				<div
 					className={`${styles.imgContainer} ${styles.imgContainerDimensions}`}
@@ -49,35 +49,35 @@ export default function Home() {
 					/>
 				</div>
 
-				<div className={`${styles.containerGap} ${desktopActive ? styles.introInfoDesktop : ''}`}>
+				<div
+					className={`${styles.containerGap} ${
+						desktopActive ? styles.introInfoDesktop : ""
+					}`}
+				>
 					<TextBlock
 						headingType
 						heading="headingBig"
 						headingOneContent={t("introTitle")}
 					/>
-				
-					{!desktopActive ? 
-					<>
-					<TextBlock
-						paragraph
-						
-						paragraphContent={t("introExplanation")}
-					/>
-					
-					<TextBlock
-						headingType
-						heading="headingSmaller"
-						headingOneContent={t("secondaryHeading")}
-					/>
-					</>
-					 : 
+
+					{!desktopActive ? (
+						<>
+							<TextBlock paragraph paragraphContent={t("introExplanation")} />
+
+							<TextBlock
+								headingType
+								heading="headingSmaller"
+								headingOneContent={t("secondaryHeading")}
+							/>
+						</>
+					) : (
 						<TextBlock
-						paragraph
-						isCentered={desktopActive}
-						paragraphContent={t("extraIntroDesktop")}
-					/>
-					}
-			
+							paragraph
+							isCentered={desktopActive}
+							paragraphContent={t("extraIntroDesktop")}
+						/>
+					)}
+
 					<Button
 						space="btnOutSpace"
 						link="addLink"
@@ -86,36 +86,45 @@ export default function Home() {
 					/>
 				</div>
 			</section>
-			
-			<section className={`${styles.containerGap} ${desktopActive ? styles.sectionDesktop : ''}`}>
 
-				{desktopActive && 
+			<section
+				className={`${styles.containerGap} ${
+					desktopActive ? styles.sectionDesktop : ""
+				}`}
+			>
+				{desktopActive && (
+					<>
+						<TextBlock
+							headingType
+							heading="headingBig"
+							headingOneContent={t("extraHeadingDesktop")}
+						/>
 
-				<>
-					<TextBlock
-					headingType
-					heading="headingBig"
-					headingOneContent={t("extraHeadingDesktop")}
-					/>	
-					
-					<TextBlock
-					paragraph
-					paragraphContent={t("introExplanationDesktop")}
-					/>
+						<TextBlock
+							paragraph
+							paragraphContent={t("introExplanationDesktop")}
+						/>
 
-					<TextBlock
-					headingType
-					heading="headingBig"
-					headingOneContent={t("secondaryHeading")}
-					/>	
-				</>
-				}
-
+						<TextBlock
+							headingType
+							heading="headingBig"
+							headingOneContent={t("secondaryHeading")}
+						/>
+					</>
+				)}
 			</section>
 
-			<section className={desktopActive ? styles.aboutSectiondesktop : styles.containerGap} id="about">
-				<div className={desktopActive ? styles.aboutDesktop : styles.imgContainerDimensions}>
-				
+			<section
+				className={
+					desktopActive ? styles.aboutSectiondesktop : styles.containerGap
+				}
+				id="about"
+			>
+				<div
+					className={
+						desktopActive ? styles.aboutDesktop : styles.imgContainerDimensions
+					}
+				>
 					<Image
 						className={styles.imagePhoto}
 						src="/svgs/photos/melisa.svg"
@@ -131,29 +140,22 @@ export default function Home() {
 						align="justify"
 						headingTwoContent={t("aboutTitle")}
 					/>
-					<TextBlock
-						paragraph
-						paragraphContent={t("aboutParagraph")}
-					/>
+					<TextBlock paragraph paragraphContent={t("aboutParagraph")} />
 				</div>
-			
 			</section>
 
 			<section className={styles.containerGap}>
 				{!desktopActive && (
-					
 					<>
-					{activitiesImg.map((activity, index) => (
-						<ImgText key={index} tabletActive={tabletActive} {...activity} />
-					))}
+						{activitiesImg.map((activity, index) => (
+							<ImgText key={index} tabletActive={tabletActive} {...activity} />
+						))}
 					</>
-					
-				)}				
+				)}
 			</section>
-			
-			{desktopActive && (
-				<Carousel desktopActive={desktopActive} slides={activitiesImg}/>
 
+			{desktopActive && (
+				<Carousel desktopActive={desktopActive} slides={activitiesImg} />
 			)}
 
 			<section className={styles.containerGap} id="prices">
@@ -207,8 +209,13 @@ export default function Home() {
 				></Image>
 			</section>
 
-			<Carousel carouselText slides={reviews} textOne="testimonial" textTwo="writer" />
-			
+			<Carousel
+				carouselText
+				slides={reviews}
+				textOne="testimonial"
+				textTwo="writer"
+			/>
+
 			<div className={styles.containerGap} id="contact">
 				<TextBlock
 					headingType
@@ -233,12 +240,10 @@ export default function Home() {
 					};
 
 					sendEmail(message);
-
 				}}
 			>
 				{scheduleFormInput.map((input, index) => {
 					return (
-					
 						<Input
 							key={index}
 							name={input.inputName}
@@ -249,9 +254,8 @@ export default function Home() {
 							validation={input.validation}
 							validationMessage={input.validationMessage}
 							handleChange={(value) => {
-								input.value = value	
+								input.value = value;
 							}}
-							
 						/>
 					);
 				})}
@@ -275,7 +279,7 @@ export default function Home() {
 				/>
 			</section>
 
-			<Footer desktopActive={desktopActive}/>
+			<Footer desktopActive={desktopActive} />
 		</main>
 	);
 }
