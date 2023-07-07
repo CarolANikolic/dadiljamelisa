@@ -1,23 +1,26 @@
 "use client";
-import TextBlock from "@/components/TextBlock";
-import Navbar from "@/components/Navbar";
+import TextBlock from "./components/TextBlock";
+import Navbar from "./components/Navbar";
 import styles from "./page.module.css";
 import Image from "next/image";
-import Button from "@/components/Button";
-import ImgText from "@/components/ImgText";
-import Footer from "@/components/Footer";
-import activitiesImg from "@/assets/objects/activitiesImg";
-import Carousel from "@/components/Carousel";
-import reviews from "@/assets/objects/reviews";
+import Button from "./components/Button";
+import ImgText from "./components/ImgText";
+import Footer from "./components/Footer";
+import activitiesImg from "./assets/objects/activitiesImg";
+import Carousel from "./components/Carousel";
+import reviews from "./assets/objects/reviews";
 import { useState } from "react";
-import Form from "@/components/Form/Form";
-import sendEmail from "@/assets/functions/sendEmail";
-import useCheckScreenSize from "@/hooks/useCheckScreenSize";
-import Input from "@/components/Input";
-import scheduleFormInput from "@/assets/objects/scheduleFormInput";
-import validateInput from "@/assets/functions/validateInput";
+import Form from "./components/Form/Form";
+import sendEmail from "./assets/functions/sendEmail";
+import useCheckScreenSize from "./hooks/useCheckScreenSize";
+import Input from "./components/Input";
+import scheduleFormInput from "./assets/objects/scheduleFormInput"; 
+import {useTranslations} from "next-intl";
+import Link from 'next-intl/link';
 
 export default function Home() {
+	const t = useTranslations('Index');
+
 	const [tabletActive, setTabletActive] = useState(false);
 	const [desktopActive, setDesktopActive] = useState(false);
 
@@ -27,8 +30,19 @@ export default function Home() {
 
 	return (
 		<main className={styles.main}>
-			<Navbar />
 
+			<Navbar linkOne={t("linkOne")} 
+					linkTwo={t("linkTwo")} 
+					linkThree={t("linkThree")} 
+					linkFour={t("linkFour")}/>
+
+			<div>
+				<Link href="/" locale="en">English</Link>
+				{" "} | {" "}
+				<Link href="/" locale="sr">Serbian</Link>
+			</div>
+
+			
 			<section id="home" className={styles.desktopIntro}>
 				<div
 					className={`${styles.imgContainer} ${styles.imgContainerDimensions}`}
@@ -46,7 +60,7 @@ export default function Home() {
 					<TextBlock
 						headingType
 						heading="headingBig"
-						headingOneContent="Your Trusted Educator and Nanny for a Relaxing Weekend Without Children!"
+						headingOneContent={t("introTitle")}
 					/>
 				
 					{!desktopActive ? 
@@ -54,20 +68,20 @@ export default function Home() {
 					<TextBlock
 						paragraph
 						
-						paragraphContent="Are you craving a much-needed break? Whether you have obligations to attend to, want to enjoy a night out with friends, or simply need time to rest and recharge, I have you covered. I'm Melisa, a professional and experienced caregiver. With my 24-hour babysitting services you can enjoy a worry-free break. Comprehensive Development: I offer a diverse range of activities, workshops, and educational subjects, ensuring your child's holistic growth. Nurturing Environment:  My work is based on creating a supportive and inclusive space, fostering positive social connections and valuable mentorship. Collaborative Learning: I encourage siblings to learn from each other, build friendships, and inspire one another, fostering a supportive and enriching environment."
+						paragraphContent={t("introExplanation")}
 					/>
 					
 					<TextBlock
 						headingType
 						heading="headingSmaller"
-						headingOneContent="The only nanny and educator that offers a 24h care service in Belgrade!"
+						headingOneContent={t("secondaryHeading")}
 					/>
 					</>
 					 : 
 						<TextBlock
 						paragraph
 						isCentered={desktopActive}
-						paragraphContent="Are you craving a much-needed break? Whether you have obligations to attend to, want to enjoy a night out with friends, or simply need time to rest and recharge, I have you covered. I'm Melisa, a professional and experienced caregiver. With my 24-hour babysitting services you can enjoy a worry-free break."
+						paragraphContent={t("extraIntroDesktop")}
 					/>
 					}
 			
@@ -75,7 +89,7 @@ export default function Home() {
 						space="btnOutSpace"
 						link="addLink"
 						linkId="#form"
-						btnTitle="Scheduele"
+						btnTitle={t("buttonSchedule")}
 					/>
 				</div>
 			</section>
@@ -88,19 +102,18 @@ export default function Home() {
 					<TextBlock
 					headingType
 					heading="headingBig"
-					headingOneContent="Nurturing all-round development for your child's flourishing future."
+					headingOneContent={t("extraHeadingDesktop")}
 					/>	
 					
 					<TextBlock
 					paragraph
-					paragraphContent="I prioritize the well-being and development of your child in a nurturing environment where your child can thrive. From creative workshops that encourage imagination and fine motor skills, to an educational program covering various subjects like math, speech, environment, music, physics, and art, to engaging sports activities such as relay games, competitive games, polygons, story polygons, and dance activities - your child will have a well-rounded experience. I also offer the opportunity for field trips and visits to local communities, such as museums and theatres, to broaden your child's horizons and provide enriching experiences.
-					By facilitating interactions between children of different ages, I encourage positive social interactions and provide opportunities for older children to mentor and inspire their younger siblings. This creates a supportive and inclusive environment where children learn from each other, build friendships, and develop valuable social skills."
+					paragraphContent={t("introExplanationDesktop")}
 					/>
 
 					<TextBlock
 					headingType
 					heading="headingBig"
-					headingOneContent="The only nanny and educator that offers a 24h care service in Belgrade!"
+					headingOneContent={t("secondaryHeading")}
 					/>	
 				</>
 				}
@@ -123,11 +136,11 @@ export default function Home() {
 					<TextBlock
 						bold="bold"
 						align="justify"
-						headingTwoContent="Hi, I’m Melisa. I'm not just a nanny, I'm an educator with a Teacher Education Faculty degree."
+						headingTwoContent={t("aboutTitle")}
 					/>
 					<TextBlock
 						paragraph
-						paragraphContent="As an educator, I go beyond traditional childcare. With me, your children thrive through enriching workshops, tailored educational programs, fun-filled sports activities, and exciting field trips. Trust me to care for your children and educate and empower them for a bright future."
+						paragraphContent={t("aboutParagraph")}
 					/>
 				</div>
 			
@@ -154,11 +167,11 @@ export default function Home() {
 				<TextBlock
 					headingType
 					heading="headingSmaller"
-					headingOneContent="Competitive and Transparent Pricing"
+					headingOneContent={t("pricesHeading")}
 				/>
 				<TextBlock
 					uppercase="uppercase"
-					headingTwoContent="Weekend promotion 24H for EUR 50"
+					headingTwoContent={t("promotionInfo")}
 				/>
 
 				<div className={styles.containerPrices}>
@@ -190,7 +203,7 @@ export default function Home() {
 				<TextBlock
 					headingType
 					heading="headingSmaller"
-					headingOneContent="What the parents have to say"
+					headingOneContent={t("testimonialsHeading")}
 				/>
 				<Image
 					className={styles.birdLogo}
@@ -207,7 +220,7 @@ export default function Home() {
 				<TextBlock
 					headingType
 					heading="headingSmaller"
-					headingOneContent="I'm here to help! Get in touch to schedule your child’s nurturing care!"
+					headingOneContent={t("formHeading")}
 				/>
 			</div>
 
@@ -255,17 +268,17 @@ export default function Home() {
 				<TextBlock
 					headingType
 					heading="headingPlayfullSmaller"
-					headingOneContent="Let me provide exceptional care for your child while you enjoy a well-deserved break!"
+					headingOneContent={t("callToActionHeading")}
 				/>
 				<TextBlock
 					bold="bold"
 					hasSmallerWidth={tabletActive}
-					headingTwoContent="Conveniently, I'm available for 24-hour care on weekends. Appointments can also be made for weekdays."
+					headingTwoContent={t("callToActionInfoOne")}
 				/>
 				<TextBlock
 					bold="bold"
 					hasSmallerWidth={tabletActive}
-					headingTwoContent="Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"
+					headingTwoContent={t("callToActionInfoTwo")}
 				/>
 			</section>
 

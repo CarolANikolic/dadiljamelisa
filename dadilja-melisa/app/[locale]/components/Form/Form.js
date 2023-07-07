@@ -1,6 +1,6 @@
 import styles from "./form.module.css";
 import Image from "next/image";
-import Button from "@/components/Button";
+import Button from "../Button";
 import PropTypes from "prop-types";
 
 const Form = ({ children, ...props }) => {

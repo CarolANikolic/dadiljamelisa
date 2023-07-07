@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import styles from './navbar.module.css'
 import Image from 'next/image';
-import Menu from '@/components/Menu';
+import Menu from '../Menu';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const Navbar = () => {
+const Navbar = (props) => {
     const [menu, setMenu] = useState(false);
 
     return (
@@ -17,10 +18,10 @@ const Navbar = () => {
                     <Menu menuTitle="Menu" toggle={{menu, setMenu}}/>
                     
                     <ul className={`${styles.list} ${menu && styles.active}`}>
-                        <li><Link className={styles.listItem} href="#home">Home</Link></li>
-                        <li><Link className={styles.listItem} href="#about">About</Link></li>
-                        <li><Link className={styles.listItem} href="#prices">Prices</Link></li>
-                        <li><Link className={styles.listItem} href="#contact">Contact</Link></li> 
+                    <li><Link className={styles.listItem} href="#home">{props.linkOne}</Link></li>
+                        <li><Link className={styles.listItem} href="#about">{props.linkTwo}</Link></li>
+                        <li><Link className={styles.listItem} href="#prices">{props.linkThree}</Link></li>
+                        <li><Link className={styles.listItem} href="#contact">{props.linkFour}</Link></li> 
                     </ul>
                     
                 </div>
@@ -37,3 +38,10 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+Navbar.propTypes = {
+    linkOne: PropTypes.string,
+    linkTwo: PropTypes.string,
+    linkThree: PropTypes.string,
+    linkFour: PropTypes.string
+}
