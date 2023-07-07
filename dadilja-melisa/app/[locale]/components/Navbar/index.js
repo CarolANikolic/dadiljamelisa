@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next-intl/link';
 import styles from './navbar.module.css'
 import Image from 'next/image';
 import Menu from '../Menu';
@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 
 const Navbar = (props) => {
     const [menu, setMenu] = useState(false);
+    const [language, setLanguage] = useState(false);
 
     return (
             <nav>
@@ -27,11 +28,16 @@ const Navbar = (props) => {
                 </div>
 
                 <div className={styles.listContainer}>
-                    
-                    <select className={styles.selectLng} name="language" id="language">
-                        <option value="English">English</option>
-                        <option value="Serbian">Serbian</option>
-                    </select>
+                    <div className={styles.selectLng}>
+                    <p className={styles.langSelector}  onClick={() => setLanguage(!language)}>Language</p>
+                    {language && (
+                        <div className={styles.langOptionsContainer}>
+                            <Link className={styles.langOptions} href="/" locale="en">English</Link>
+                            <Link className={styles.langOptions} href="/" locale="sr">Serbian</Link>
+                        </div>
+                    )}
+
+                    </div>
                 </div>
             </nav>
     );

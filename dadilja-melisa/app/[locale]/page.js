@@ -35,13 +35,6 @@ export default function Home() {
 					linkTwo={t("linkTwo")} 
 					linkThree={t("linkThree")} 
 					linkFour={t("linkFour")}/>
-
-			<div>
-				<Link href="/" locale="en">English</Link>
-				{" "} | {" "}
-				<Link href="/" locale="sr">Serbian</Link>
-			</div>
-
 			
 			<section id="home" className={styles.desktopIntro}>
 				<div

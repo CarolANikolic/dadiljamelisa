@@ -41,14 +41,11 @@
 	font-size: 0.875rem;
 	margin-top: 5%;
 	text-decoration: none;
+	color: var(---black);
 }
 
 .listItem:hover {
 	border-bottom: 2px solid var(---yellow);
-}
-
-.listItem:visited {
-	color: var(---black);
 }
 
 .menu {
@@ -60,18 +57,32 @@
 }
 
 .selectLng {
-	background-image: url(/svgs/icons/globe.svg);
-	background-repeat: no-repeat;
-	background-size: 1.3rem;
 	background-color: var(--beige);
-	padding: 8px 20px;
-	background-position: 0;
 	border-style: none;
 	font-size: 0.875rem;
 	font-family: var(---montserrat);
 	position: absolute;
 	top: 85px;
 	right: 16px;
+}
+
+.langSelector {
+	background-image: url(/svgs/icons/globe.svg);
+	background-repeat: no-repeat;
+	background-size: 1rem;
+	background-position: 0;
+	padding: 8px 20px;
+}
+
+.langOptionsContainer {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.langOptions {
+	text-decoration: none;
+	color: var(---black);
 }
 
 /* Tablet screen */
