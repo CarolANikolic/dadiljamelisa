@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import activitiesImg from "./assets/objects/activitiesImgEnglish";
 import Carousel from "./components/Carousel";
 import reviews from "./assets/objects/reviews";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Form from "./components/Form/Form";
 import sendEmail from "./assets/functions/sendEmail";
 import useCheckScreenSize from "./hooks/useCheckScreenSize";
@@ -24,7 +24,9 @@ export default function Home() {
 
 	const [tabletActive, setTabletActive] = useState(false);
 	const [desktopActive, setDesktopActive] = useState(false);
-	const [changeLanguage, setChangeLanguage] = useState("sr");
+	const [changeLanguage, setChangeLanguage] = useState(
+		typeof window !== "undefined" ? localStorage.getItem("language") : "sr"
+	);
 
 	//   Call useEffect function tohandle screen resizing for responsiveness - Tablet
 	useCheckScreenSize(480, 820, setTabletActive);
@@ -32,11 +34,8 @@ export default function Home() {
 
 	const handleLanguageChange = (selectedLanguage) => {
 		setChangeLanguage(selectedLanguage);
+		localStorage.setItem("language", selectedLanguage);
 	};
-
-	useEffect(() => {
-		console.log('Change Language:', changeLanguage);
-	}, [changeLanguage]);
 
 	return (
 		<main className={styles.main}>
@@ -157,22 +156,21 @@ export default function Home() {
 			</section>
 
 			<section className={styles.containerGap}>
-				{(!desktopActive && changeLanguage === "en") &&  (
+				{!desktopActive && changeLanguage === "en" && (
 					<>
-					{activitiesImgEnglish.map((activity, index) => (
-						<ImgText key={index} tabletActive={tabletActive} {...activity} />
-					))}
+						{activitiesImgEnglish.map((activity, index) => (
+							<ImgText key={index} tabletActive={tabletActive} {...activity} />
+						))}
 					</>
 				)}
 
-				{(!desktopActive && changeLanguage === "sr") &&  (
+				{!desktopActive && changeLanguage === "sr" && (
 					<>
-					{activitiesImgSerbian.map((activity, index) => (
-						<ImgText key={index} tabletActive={tabletActive} {...activity} />
-					))}
+						{activitiesImgSerbian.map((activity, index) => (
+							<ImgText key={index} tabletActive={tabletActive} {...activity} />
+						))}
 					</>
 				)}
-
 			</section>
 
 			{desktopActive && (
