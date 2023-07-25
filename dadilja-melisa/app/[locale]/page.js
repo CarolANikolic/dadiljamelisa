@@ -6,26 +6,37 @@ import Image from "next/image";
 import Button from "./components/Button";
 import ImgText from "./components/ImgText";
 import Footer from "./components/Footer";
-import activitiesImg from "./assets/objects/activitiesImg";
+import activitiesImg from "./assets/objects/activitiesImgEnglish";
 import Carousel from "./components/Carousel";
 import reviews from "./assets/objects/reviews";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./components/Form/Form";
 import sendEmail from "./assets/functions/sendEmail";
 import useCheckScreenSize from "./hooks/useCheckScreenSize";
 import Input from "./components/Input";
 import scheduleFormInput from "./assets/objects/scheduleFormInput";
 import { useTranslations } from "next-intl";
+import activitiesImgEnglish from "./assets/objects/activitiesImgEnglish";
+import activitiesImgSerbian from "./assets/objects/activitiesImgSerbian";
 
 export default function Home() {
 	const t = useTranslations("Index");
 
 	const [tabletActive, setTabletActive] = useState(false);
 	const [desktopActive, setDesktopActive] = useState(false);
+	const [changeLanguage, setChangeLanguage] = useState("sr");
 
 	//   Call useEffect function tohandle screen resizing for responsiveness - Tablet
 	useCheckScreenSize(480, 820, setTabletActive);
 	useCheckScreenSize(821, 9000, setDesktopActive);
+
+	const handleLanguageChange = (selectedLanguage) => {
+		setChangeLanguage(selectedLanguage);
+	};
+
+	useEffect(() => {
+		console.log('Change Language:', changeLanguage);
+	}, [changeLanguage]);
 
 	return (
 		<main className={styles.main}>
@@ -34,6 +45,7 @@ export default function Home() {
 				linkTwo={t("linkTwo")}
 				linkThree={t("linkThree")}
 				linkFour={t("linkFour")}
+				handleLanguageChange={handleLanguageChange}
 			/>
 
 			<section id="home" className={styles.desktopIntro}>
@@ -145,13 +157,22 @@ export default function Home() {
 			</section>
 
 			<section className={styles.containerGap}>
-				{!desktopActive && (
+				{(!desktopActive && changeLanguage === "en") &&  (
 					<>
-						{activitiesImg.map((activity, index) => (
-							<ImgText key={index} tabletActive={tabletActive} {...activity} />
-						))}
+					{activitiesImgEnglish.map((activity, index) => (
+						<ImgText key={index} tabletActive={tabletActive} {...activity} />
+					))}
 					</>
 				)}
+
+				{(!desktopActive && changeLanguage === "sr") &&  (
+					<>
+					{activitiesImgSerbian.map((activity, index) => (
+						<ImgText key={index} tabletActive={tabletActive} {...activity} />
+					))}
+					</>
+				)}
+
 			</section>
 
 			{desktopActive && (
