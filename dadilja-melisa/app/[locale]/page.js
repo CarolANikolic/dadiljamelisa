@@ -17,6 +17,7 @@ import scheduleFormInput from "./assets/objects/scheduleFormInput";
 import { useTranslations } from "next-intl";
 import activitiesImgEnglish from "./assets/objects/activitiesImgEnglish";
 import activitiesImgSerbian from "./assets/objects/activitiesImgSerbian";
+import reviewsSerbian from "./assets/objects/reviewsSerbian";
 
 export default function Home() {
 	const t = useTranslations("Index");
@@ -232,13 +233,21 @@ export default function Home() {
 				></Image>
 			</section>
 
-			<Carousel
-				carouselText
-				slides={reviewsEnglish}
-				textOne="testimonial"
-				textTwo="writer"
-			/>
-
+			{changeLanguage === "en" ?
+				(<Carousel
+					carouselText
+					slides={reviewsEnglish}
+					textOne="testimonial"
+					textTwo="writer"
+				/>) : 
+				(<Carousel
+					carouselText
+					slides={reviewsSerbian}
+					textOne="testimonial"
+					textTwo="writer"
+				/>)
+			}
+			
 			<div className={styles.containerGap} id="contact">
 				<TextBlock
 					headingType
