@@ -194,29 +194,54 @@ export default function Home() {
 					headingTwoContent={t("promotionInfo")}
 				/>
 
-				<div className={styles.containerPrices}>
-					<Image
-						className={styles.prices}
-						src="/svgs/elements/price-one-kid.svg"
-						width={248}
-						height={225}
-						alt="price for one kid"
-					/>
-					<Image
-						className={styles.prices}
-						src="/svgs/elements/price-two-kids.svg"
-						width={248}
-						height={225}
-						alt="price for two kids"
-					/>
-					<Image
-						className={styles.prices}
-						src="/svgs/elements/price-three-kids.svg"
-						width={248}
-						height={225}
-						alt="price for three kids"
-					/>
-				</div>
+				{changeLanguage === "en" ?
+					(<div className={styles.containerPrices}>
+						<Image
+							className={styles.prices}
+							src="/svgs/elements/prices-en/price-one-kid-en.svg"
+							width={248}
+							height={225}
+							alt="price for one kid"
+						/>
+						<Image
+							className={styles.prices}
+							src="/svgs/elements/prices-en/price-two-kids-en.svg"
+							width={248}
+							height={225}
+							alt="price for two kids"
+						/>
+						<Image
+							className={styles.prices}
+							src="/svgs/elements/prices-en/price-three-kids-en.svg"
+							width={248}
+							height={225}
+							alt="price for three kids"
+						/>
+					</div>) : 
+					(<div className={styles.containerPrices}>
+						<Image
+							className={styles.prices}
+							src="/svgs/elements/prices-sr/price-one-kid-sr.svg"
+							width={248}
+							height={225}
+							alt="price for one kid"
+						/>
+						<Image
+							className={styles.prices}
+							src="/svgs/elements/prices-sr/price-two-kids-sr.svg"
+							width={248}
+							height={225}
+							alt="price for two kids"
+						/>
+						<Image
+							className={styles.prices}
+							src="/svgs/elements/prices-sr/price-three-kids-sr.svg"
+							width={248}
+							height={225}
+							alt="price for three kids"
+						/>
+					</div>)
+				}	
 			</section>
 
 			<section className={styles.containerGap}>
