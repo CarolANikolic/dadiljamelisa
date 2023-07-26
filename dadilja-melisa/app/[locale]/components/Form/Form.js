@@ -41,7 +41,7 @@ const Form = ({ children, ...props }) => {
 				</div>
 			</div>
 
-			<Button space="btnOutSpace" btnTitle="Scheduele" type="submit" />
+			<Button space="btnOutSpace" btnTitle={props.lang === "en" ? "Send" : "Poslati"} type="submit" />
 
 			{props.desktopActive ? (
 				<div className={styles.desktopDrawingsContainer}>

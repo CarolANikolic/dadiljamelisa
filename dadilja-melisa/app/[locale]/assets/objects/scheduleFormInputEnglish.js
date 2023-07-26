@@ -1,4 +1,4 @@
-const scheduleFormInput = [
+const scheduleFormInputEnglish = [
 	{
 		inputName: "Name",
 		type: "text",
@@ -48,4 +48,4 @@ const scheduleFormInput = [
 	},
 ];
 
-export default scheduleFormInput;
+export default scheduleFormInputEnglish;

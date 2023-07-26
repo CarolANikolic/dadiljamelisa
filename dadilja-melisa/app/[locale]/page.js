@@ -13,7 +13,8 @@ import Form from "./components/Form/Form";
 import sendEmail from "./assets/functions/sendEmail";
 import useCheckScreenSize from "./hooks/useCheckScreenSize";
 import Input from "./components/Input";
-import scheduleFormInput from "./assets/objects/scheduleFormInput";
+import scheduleFormInputEnglish from "./assets/objects/scheduleFormInputEnglish";
+import scheduleFormInputSerbian from "./assets/objects/schedueleFormInputSerbian";
 import { useTranslations } from "next-intl";
 import activitiesImgEnglish from "./assets/objects/activitiesImgEnglish";
 import activitiesImgSerbian from "./assets/objects/activitiesImgSerbian";
@@ -256,25 +257,27 @@ export default function Home() {
 				/>
 			</div>
 
-			<Form
+			{changeLanguage === "en" ? (
+				<Form
 				tabletActive={tabletActive}
 				desktopActive={desktopActive}
+				lang={changeLanguage}
 				onSubmit={(event) => {
 					event.preventDefault();
-
+				
 					const message = {
-						Name: scheduleFormInput[0].value,
-						Phone: scheduleFormInput[1].value,
-						Email: scheduleFormInput[2].value,
-						"Starting Date": scheduleFormInput[3].value,
-						"Ending Date": scheduleFormInput[4].value,
-						Message: scheduleFormInput[5].value,
+						Name: scheduleFormInputEnglish[0].value,
+						Phone: scheduleFormInputEnglish[1].value,
+						Email: scheduleFormInputEnglish[2].value,
+						"Starting Date": scheduleFormInputEnglish[3].value,
+						"Ending Date": scheduleFormInputEnglish[4].value,
+						Message: scheduleFormInputEnglish[5].value,
 					};
 
 					sendEmail(message);
 				}}
-			>
-				{scheduleFormInput.map((input, index) => {
+				>
+				{scheduleFormInputEnglish.map((input, index) => {
 					return (
 						<Input
 							key={index}
@@ -291,8 +294,47 @@ export default function Home() {
 						/>
 					);
 				})}
-			</Form>
+				</Form>
+			) : 
+				(<Form
+				tabletActive={tabletActive}
+				desktopActive={desktopActive}
+				lang={changeLanguage}
+				onSubmit={(event) => {
+					event.preventDefault();
+				
+					const message = {
+						Name: scheduleFormInputSerbian[0].value,
+						Phone: scheduleFormInputSerbian[1].value,
+						Email: scheduleFormInputSerbian[2].value,
+						"Starting Date": scheduleFormInputSerbian[3].value,
+						"Ending Date": scheduleFormInputSerbian[4].value,
+						Message: scheduleFormInputSerbian[5].value,
+					};
 
+					sendEmail(message);
+				}}
+			>
+				{scheduleFormInputSerbian.map((input, index) => {
+					return (
+						<Input
+							key={index}
+							name={input.inputName}
+							type={input.type}
+							icon={input.icon}
+							isTablet={tabletActive}
+							placeholder={input.placeholder}
+							validation={input.validation}
+							validationMessage={input.validationMessage}
+							handleChange={(value) => {
+								input.value = value;
+							}}
+						/>
+					);
+				})}
+				</Form>
+			)}
+	
 			<section className={`${styles.containerGap} ${styles.lastSection}`}>
 				<TextBlock
 					headingType
