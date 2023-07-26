@@ -40,3 +40,7 @@ a {
 .swiper-pagination-bullet-active {
     background-color: var(---darkPink) !important;
 }
+
+.error-message {
+    color: #ba2323;
+}
