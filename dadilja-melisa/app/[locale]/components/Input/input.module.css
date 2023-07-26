@@ -38,6 +38,10 @@
     background-image: url(/svgs/icons/mail-dark.svg); 
 }
 
+.errorMessage {
+    color: #ba2323;
+}
+
 @media (min-width: 481px) and (max-width: 820px) {
 
     .inputContainer {

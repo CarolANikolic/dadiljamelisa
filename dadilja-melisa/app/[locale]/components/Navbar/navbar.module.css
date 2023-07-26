@@ -85,6 +85,14 @@
 	color: var(---black);
 }
 
+.langOptions:hover {
+	font-weight: bold;
+}
+
+.langOptions:focus {
+	font-size: 1rem;
+}
+
 /* Tablet screen */
 
 @media (min-width: 481px) and (max-width: 820px) {

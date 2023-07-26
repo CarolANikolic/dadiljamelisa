@@ -32,8 +32,8 @@ const Navbar = (props) => {
                     <p className={styles.langSelector}  onClick={() => setLanguage(!language)}>Language</p>
                     {language && (
                         <div className={styles.langOptionsContainer}>
-                            <Link href="/" locale="en" onClick={() => props.handleLanguageChange("en")}>English</Link>
-                            <Link href="/" locale="sr" onClick={() => props.handleLanguageChange("sr")}>Serbian</Link>
+                            <Link className={styles.langOptions} href="/" locale="en" onClick={() => props.handleLanguageChange("en")}>English</Link>
+                            <Link className={styles.langOptions} href="/" locale="sr" onClick={() => props.handleLanguageChange("sr")}>Serbian</Link>
                         </div>
                     )}
 

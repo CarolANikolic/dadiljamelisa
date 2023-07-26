@@ -73,7 +73,7 @@ const Input = (props) => {
 						required
 					></input>
 					{notMatch && (
-						<span className="error-message">
+						<span className={styles.errorMessage}>
 							{empty ? "This field is required" : props.validationMessage}
 						</span>
 					)}
