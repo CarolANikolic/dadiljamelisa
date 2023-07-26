@@ -8,7 +8,7 @@ import ImgText from "./components/ImgText";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import reviewsEnglish from "./assets/objects/reviewsEnglish";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./components/Form/Form";
 import sendEmail from "./assets/functions/sendEmail";
 import useCheckScreenSize from "./hooks/useCheckScreenSize";
@@ -20,14 +20,16 @@ import activitiesImgSerbian from "./assets/objects/activitiesImgSerbian";
 
 export default function Home() {
 	const t = useTranslations("Index");
-
 	const [tabletActive, setTabletActive] = useState(false);
 	const [desktopActive, setDesktopActive] = useState(false);
-	const [changeLanguage, setChangeLanguage] = useState(
-		typeof window !== "undefined" ? localStorage.getItem("language") : "sr"
-	);
+	const [changeLanguage, setChangeLanguage] = useState();
 
-	//   Call useEffect function to handle screen resizing for responsiveness - Tablet
+	useEffect(() => {
+	  // Set language state based on local storage (client-side)
+		const storedLanguage = localStorage.getItem("language");
+		setChangeLanguage(storedLanguage || "sr");
+	}, []);
+
 	useCheckScreenSize(480, 820, setTabletActive);
 	useCheckScreenSize(821, 9000, setDesktopActive);
 
@@ -156,28 +158,28 @@ export default function Home() {
 			<section className={styles.containerGap}>
 				{!desktopActive && changeLanguage === "en" ? (
 					<>
-					{activitiesImgEnglish.map((activity, index) => (
-						<ImgText key={index} tabletActive={tabletActive} {...activity} />
+						{activitiesImgEnglish.map((activity, index) => (
+							<ImgText key={index} tabletActive={tabletActive} {...activity} />
 					))}
 					</>
 				) : (
 					!desktopActive && changeLanguage === "sr" && (
 					<>
 						{activitiesImgSerbian.map((activity, index) => (
-						<ImgText key={index} tabletActive={tabletActive} {...activity} />
+							<ImgText key={index} tabletActive={tabletActive} {...activity} />
 						))}
 					</>
 					)
 				)}
 			</section>
 
-			{desktopActive && changeLanguage === "en" && (
+			{desktopActive && changeLanguage === "en" ? (
 				<Carousel desktopActive={desktopActive} slides={activitiesImgEnglish} />
-			)}
+			) : (
 
-			{desktopActive && changeLanguage === "sr" && (
+			desktopActive && changeLanguage === "sr" && (
 				<Carousel desktopActive={desktopActive} slides={activitiesImgSerbian} />
-			)}
+			))}
 
 			<section className={styles.containerGap} id="prices">
 				<TextBlock
