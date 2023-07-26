@@ -21,7 +21,7 @@ import activitiesImgSerbian from "./assets/objects/activitiesImgSerbian";
 import reviewsSerbian from "./assets/objects/reviewsSerbian";
 
 export default function Home() {
-	const t = useTranslations("Index");
+	const translate = useTranslations("Index");
 	const [tabletActive, setTabletActive] = useState(false);
 	const [desktopActive, setDesktopActive] = useState(false);
 	const [changeLanguage, setChangeLanguage] = useState();
@@ -43,10 +43,10 @@ export default function Home() {
 	return (
 		<main className={styles.main}>
 			<Navbar
-				linkOne={t("linkOne")}
-				linkTwo={t("linkTwo")}
-				linkThree={t("linkThree")}
-				linkFour={t("linkFour")}
+				linkOne={translate("linkOne")}
+				linkTwo={translate("linkTwo")}
+				linkThree={translate("linkThree")}
+				linkFour={translate("linkFour")}
 				handleLanguageChange={handleLanguageChange}
 			/>
 
@@ -70,24 +70,24 @@ export default function Home() {
 					<TextBlock
 						headingType
 						heading="headingBig"
-						headingOneContent={t("introTitle")}
+						headingOneContent={translate("introTitle")}
 					/>
 
 					{!desktopActive ? (
 						<>
-							<TextBlock paragraph paragraphContent={t("introExplanation")} />
+							<TextBlock paragraph paragraphContent={translate("introExplanation")} />
 
 							<TextBlock
 								headingType
 								heading="headingSmaller"
-								headingOneContent={t("secondaryHeading")}
+								headingOneContent={translate("secondaryHeading")}
 							/>
 						</>
 					) : (
 						<TextBlock
 							paragraph
 							isCentered={desktopActive}
-							paragraphContent={t("extraIntroDesktop")}
+							paragraphContent={translate("extraIntroDesktop")}
 						/>
 					)}
 
@@ -95,7 +95,7 @@ export default function Home() {
 						space="btnOutSpace"
 						link="addLink"
 						linkId="#form"
-						btnTitle={t("buttonSchedule")}
+						btnTitle={translate("buttonSchedule")}
 					/>
 				</div>
 			</section>
@@ -110,18 +110,18 @@ export default function Home() {
 						<TextBlock
 							headingType
 							heading="headingBig"
-							headingOneContent={t("extraHeadingDesktop")}
+							headingOneContent={translate("extraHeadingDesktop")}
 						/>
 
 						<TextBlock
 							paragraph
-							paragraphContent={t("introExplanationDesktop")}
+							paragraphContent={translate("introExplanationDesktop")}
 						/>
 
 						<TextBlock
 							headingType
 							heading="headingBig"
-							headingOneContent={t("secondaryHeading")}
+							headingOneContent={translate("secondaryHeading")}
 						/>
 					</>
 				)}
@@ -151,9 +151,9 @@ export default function Home() {
 					<TextBlock
 						bold="bold"
 						align="justify"
-						headingTwoContent={t("aboutTitle")}
+						headingTwoContent={translate("aboutTitle")}
 					/>
-					<TextBlock paragraph paragraphContent={t("aboutParagraph")} />
+					<TextBlock paragraph paragraphContent={translate("aboutParagraph")} />
 				</div>
 			</section>
 
@@ -187,11 +187,11 @@ export default function Home() {
 				<TextBlock
 					headingType
 					heading="headingSmaller"
-					headingOneContent={t("pricesHeading")}
+					headingOneContent={translate("pricesHeading")}
 				/>
 				<TextBlock
 					uppercase="uppercase"
-					headingTwoContent={t("promotionInfo")}
+					headingTwoContent={translate("promotionInfo")}
 				/>
 
 				{changeLanguage === "en" ?
@@ -248,7 +248,7 @@ export default function Home() {
 				<TextBlock
 					headingType
 					heading="headingSmaller"
-					headingOneContent={t("testimonialsHeading")}
+					headingOneContent={translate("testimonialsHeading")}
 				/>
 				<Image
 					className={styles.birdLogo}
@@ -278,7 +278,7 @@ export default function Home() {
 				<TextBlock
 					headingType
 					heading="headingSmaller"
-					headingOneContent={t("formHeading")}
+					headingOneContent={translate("formHeading")}
 				/>
 			</div>
 
@@ -364,17 +364,17 @@ export default function Home() {
 				<TextBlock
 					headingType
 					heading="headingPlayfullSmaller"
-					headingOneContent={t("callToActionHeading")}
+					headingOneContent={translate("callToActionHeading")}
 				/>
 				<TextBlock
 					bold="bold"
 					hasSmallerWidth={tabletActive}
-					headingTwoContent={t("callToActionInfoOne")}
+					headingTwoContent={translate("callToActionInfoOne")}
 				/>
 				<TextBlock
 					bold="bold"
 					hasSmallerWidth={tabletActive}
-					headingTwoContent={t("callToActionInfoTwo")}
+					headingTwoContent={translate("callToActionInfoTwo")}
 				/>
 			</section>
 
