@@ -7,7 +7,7 @@ import Button from "./components/Button";
 import ImgText from "./components/ImgText";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
-import reviews from "./assets/objects/reviews";
+import reviewsEnglish from "./assets/objects/reviewsEnglish";
 import { useState } from "react";
 import Form from "./components/Form/Form";
 import sendEmail from "./assets/functions/sendEmail";
@@ -232,7 +232,7 @@ export default function Home() {
 
 			<Carousel
 				carouselText
-				slides={reviews}
+				slides={reviewsEnglish}
 				textOne="testimonial"
 				textTwo="writer"
 			/>
