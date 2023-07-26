@@ -1,4 +1,4 @@
-const activitiesImg = [
+const activitiesImgEnglish = [
     {
         source: "/activities-imgs-en/creativity-en.jpg",
         alt: "creativity and imagination",
@@ -29,4 +29,4 @@ const activitiesImg = [
     }
 ];
 
-export default activitiesImg;
+export default activitiesImgEnglish;
