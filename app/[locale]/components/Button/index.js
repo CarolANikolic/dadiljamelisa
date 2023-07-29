@@ -1,6 +1,6 @@
 import styles from "./btn.module.css";
 import PropTypes from "prop-types";
-import Link from "next/link";
+import Link from "next-intl/link";
 
 const Btn = (props) => {
 	return (

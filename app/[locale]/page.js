@@ -27,7 +27,7 @@ export default function Home() {
 	const [changeLanguage, setChangeLanguage] = useState();
 
 	useEffect(() => {
-	  // Set language state based on local storage (client-side)
+		// Set language state based on local storage (client-side)
 		const storedLanguage = localStorage.getItem("language");
 		setChangeLanguage(storedLanguage || "sr");
 	}, []);
@@ -66,7 +66,8 @@ export default function Home() {
 				<div
 					className={`${styles.containerGap} ${
 						desktopActive ? styles.introInfoDesktop : ""
-					}`}>
+					}`}
+				>
 					<TextBlock
 						headingType
 						heading="headingBig"
@@ -75,7 +76,10 @@ export default function Home() {
 
 					{!desktopActive ? (
 						<>
-							<TextBlock paragraph paragraphContent={translate("introExplanation")} />
+							<TextBlock
+								paragraph
+								paragraphContent={translate("introExplanation")}
+							/>
 
 							<TextBlock
 								headingType
@@ -162,15 +166,20 @@ export default function Home() {
 					<>
 						{activitiesImgEnglish.map((activity, index) => (
 							<ImgText key={index} tabletActive={tabletActive} {...activity} />
-					))}
-					</>
-				) : (
-					!desktopActive && changeLanguage === "sr" && (
-					<>
-						{activitiesImgSerbian.map((activity, index) => (
-							<ImgText key={index} tabletActive={tabletActive} {...activity} />
 						))}
 					</>
+				) : (
+					!desktopActive &&
+					changeLanguage === "sr" && (
+						<>
+							{activitiesImgSerbian.map((activity, index) => (
+								<ImgText
+									key={index}
+									tabletActive={tabletActive}
+									{...activity}
+								/>
+							))}
+						</>
 					)
 				)}
 			</section>
@@ -178,10 +187,14 @@ export default function Home() {
 			{desktopActive && changeLanguage === "en" ? (
 				<Carousel desktopActive={desktopActive} slides={activitiesImgEnglish} />
 			) : (
-
-			desktopActive && changeLanguage === "sr" && (
-				<Carousel desktopActive={desktopActive} slides={activitiesImgSerbian} />
-			))}
+				desktopActive &&
+				changeLanguage === "sr" && (
+					<Carousel
+						desktopActive={desktopActive}
+						slides={activitiesImgSerbian}
+					/>
+				)
+			)}
 
 			<section className={styles.containerGap} id="prices">
 				<TextBlock
@@ -194,8 +207,8 @@ export default function Home() {
 					headingTwoContent={translate("promotionInfo")}
 				/>
 
-				{changeLanguage === "en" ?
-					(<div className={styles.containerPrices}>
+				{changeLanguage === "en" ? (
+					<div className={styles.containerPrices}>
 						<Image
 							className={styles.prices}
 							src="/svgs/elements/prices-en/price-one-kid-en.svg"
@@ -217,8 +230,9 @@ export default function Home() {
 							height={225}
 							alt="price for three kids"
 						/>
-					</div>) : 
-					(<div className={styles.containerPrices}>
+					</div>
+				) : (
+					<div className={styles.containerPrices}>
 						<Image
 							className={styles.prices}
 							src="/svgs/elements/prices-sr/price-one-kid-sr.svg"
@@ -240,8 +254,8 @@ export default function Home() {
 							height={225}
 							alt="price for three kids"
 						/>
-					</div>)
-				}	
+					</div>
+				)}
 			</section>
 
 			<section className={styles.containerGap}>
@@ -259,21 +273,22 @@ export default function Home() {
 				></Image>
 			</section>
 
-			{changeLanguage === "en" ?
-				(<Carousel
+			{changeLanguage === "en" ? (
+				<Carousel
 					carouselText
 					slides={reviewsEnglish}
 					textOne="testimonial"
 					textTwo="writer"
-				/>) : 
-				(<Carousel
+				/>
+			) : (
+				<Carousel
 					carouselText
 					slides={reviewsSerbian}
 					textOne="testimonial"
 					textTwo="writer"
-				/>)
-			}
-			
+				/>
+			)}
+
 			<div className={styles.containerGap} id="contact">
 				<TextBlock
 					headingType
@@ -284,82 +299,82 @@ export default function Home() {
 
 			{changeLanguage === "en" ? (
 				<Form
-				tabletActive={tabletActive}
-				desktopActive={desktopActive}
-				lang={changeLanguage}
-				onSubmit={(event) => {
-					event.preventDefault();
-				
-					const message = {
-						Name: scheduleFormInputEnglish[0].value,
-						Phone: scheduleFormInputEnglish[1].value,
-						Email: scheduleFormInputEnglish[2].value,
-						"Starting Date": scheduleFormInputEnglish[3].value,
-						"Ending Date": scheduleFormInputEnglish[4].value,
-						Message: scheduleFormInputEnglish[5].value,
-					};
+					tabletActive={tabletActive}
+					desktopActive={desktopActive}
+					lang={changeLanguage}
+					onSubmit={(event) => {
+						event.preventDefault();
 
-					sendEmail(message);
-				}}
+						const message = {
+							Name: scheduleFormInputEnglish[0].value,
+							Phone: scheduleFormInputEnglish[1].value,
+							Email: scheduleFormInputEnglish[2].value,
+							"Starting Date": scheduleFormInputEnglish[3].value,
+							"Ending Date": scheduleFormInputEnglish[4].value,
+							Message: scheduleFormInputEnglish[5].value,
+						};
+
+						sendEmail(message);
+					}}
 				>
-				{scheduleFormInputEnglish.map((input, index) => {
-					return (
-						<Input
-							key={index}
-							name={input.inputName}
-							type={input.type}
-							icon={input.icon}
-							isTablet={tabletActive}
-							placeholder={input.placeholder}
-							validation={input.validation}
-							validationMessage={input.validationMessage}
-							handleChange={(value) => {
-								input.value = value;
-							}}
-						/>
-					);
-				})}
+					{scheduleFormInputEnglish.map((input, index) => {
+						return (
+							<Input
+								key={index}
+								name={input.inputName}
+								type={input.type}
+								icon={input.icon}
+								isTablet={tabletActive}
+								placeholder={input.placeholder}
+								validation={input.validation}
+								validationMessage={input.validationMessage}
+								handleChange={(value) => {
+									input.value = value;
+								}}
+							/>
+						);
+					})}
 				</Form>
-			) : 
-				(<Form
-				tabletActive={tabletActive}
-				desktopActive={desktopActive}
-				lang={changeLanguage}
-				onSubmit={(event) => {
-					event.preventDefault();
-				
-					const message = {
-						Name: scheduleFormInputSerbian[0].value,
-						Phone: scheduleFormInputSerbian[1].value,
-						Email: scheduleFormInputSerbian[2].value,
-						"Starting Date": scheduleFormInputSerbian[3].value,
-						"Ending Date": scheduleFormInputSerbian[4].value,
-						Message: scheduleFormInputSerbian[5].value,
-					};
+			) : (
+				<Form
+					tabletActive={tabletActive}
+					desktopActive={desktopActive}
+					lang={changeLanguage}
+					onSubmit={(event) => {
+						event.preventDefault();
 
-					sendEmail(message);
-				}}
-			>
-				{scheduleFormInputSerbian.map((input, index) => {
-					return (
-						<Input
-							key={index}
-							name={input.inputName}
-							type={input.type}
-							icon={input.icon}
-							isTablet={tabletActive}
-							placeholder={input.placeholder}
-							validation={input.validation}
-							validationMessage={input.validationMessage}
-							handleChange={(value) => {
-								input.value = value;
-							}}
-						/>
-					);
-				})}
+						const message = {
+							Name: scheduleFormInputSerbian[0].value,
+							Phone: scheduleFormInputSerbian[1].value,
+							Email: scheduleFormInputSerbian[2].value,
+							"Starting Date": scheduleFormInputSerbian[3].value,
+							"Ending Date": scheduleFormInputSerbian[4].value,
+							Message: scheduleFormInputSerbian[5].value,
+						};
+
+						sendEmail(message);
+					}}
+				>
+					{scheduleFormInputSerbian.map((input, index) => {
+						return (
+							<Input
+								key={index}
+								name={input.inputName}
+								type={input.type}
+								icon={input.icon}
+								isTablet={tabletActive}
+								placeholder={input.placeholder}
+								validation={input.validation}
+								validationMessage={input.validationMessage}
+								handleChange={(value) => {
+									input.value = value;
+								}}
+							/>
+						);
+					})}
 				</Form>
 			)}
-	
+
 			<section className={`${styles.containerGap} ${styles.lastSection}`}>
 				<TextBlock
 					headingType
