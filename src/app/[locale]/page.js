@@ -8,7 +8,7 @@ import ImgText from "./components/ImgText";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import reviewsEnglish from "./assets/objects/reviewsEnglish";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Form from "./components/Form/Form";
 import sendEmail from "./assets/functions/sendEmail";
 import useCheckScreenSize from "./hooks/useCheckScreenSize";
@@ -19,26 +19,16 @@ import { useTranslations } from "next-intl";
 import activitiesImgEnglish from "./assets/objects/activitiesImgEnglish";
 import activitiesImgSerbian from "./assets/objects/activitiesImgSerbian";
 import reviewsSerbian from "./assets/objects/reviewsSerbian";
+import { usePathname } from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
 	const translate = useTranslations("Index");
 	const [tabletActive, setTabletActive] = useState(false);
 	const [desktopActive, setDesktopActive] = useState(false);
-	const [changeLanguage, setChangeLanguage] = useState();
-
-	useEffect(() => {
-		// Set language state based on local storage (client-side)
-		const storedLanguage = localStorage.getItem("language");
-		setChangeLanguage(storedLanguage || "sr");
-	}, []);
+	const language = usePathname();
 
 	useCheckScreenSize(480, 820, setTabletActive);
 	useCheckScreenSize(821, 9000, setDesktopActive);
-
-	const handleLanguageChange = (selectedLanguage) => {
-		setChangeLanguage(selectedLanguage);
-		localStorage.setItem("language", selectedLanguage);
-	};
 
 	return (
 		<main className={styles.main}>
@@ -47,7 +37,6 @@ export default function Home() {
 				linkTwo={translate("linkTwo")}
 				linkThree={translate("linkThree")}
 				linkFour={translate("linkFour")}
-				handleLanguageChange={handleLanguageChange}
 			/>
 
 			<section id="home" className={styles.desktopIntro}>
@@ -162,7 +151,7 @@ export default function Home() {
 			</section>
 
 			<section className={styles.containerGap}>
-				{!desktopActive && changeLanguage === "en" ? (
+				{!desktopActive && language === "/en" ? (
 					<>
 						{activitiesImgEnglish.map((activity, index) => (
 							<ImgText key={index} tabletActive={tabletActive} {...activity} />
@@ -170,7 +159,7 @@ export default function Home() {
 					</>
 				) : (
 					!desktopActive &&
-					changeLanguage === "sr" && (
+					language === "/sr" && (
 						<>
 							{activitiesImgSerbian.map((activity, index) => (
 								<ImgText
@@ -184,11 +173,11 @@ export default function Home() {
 				)}
 			</section>
 
-			{desktopActive && changeLanguage === "en" ? (
+			{desktopActive && language === "/en" ? (
 				<Carousel desktopActive={desktopActive} slides={activitiesImgEnglish} />
 			) : (
 				desktopActive &&
-				changeLanguage === "sr" && (
+				language === "/sr" && (
 					<Carousel
 						desktopActive={desktopActive}
 						slides={activitiesImgSerbian}
@@ -207,7 +196,7 @@ export default function Home() {
 					headingTwoContent={translate("promotionInfo")}
 				/>
 
-				{changeLanguage === "en" ? (
+				{language === "/en" ? (
 					<div className={styles.containerPrices}>
 						<Image
 							className={styles.prices}
@@ -273,7 +262,7 @@ export default function Home() {
 				></Image>
 			</section>
 
-			{changeLanguage === "en" ? (
+			{language === "/en" ? (
 				<Carousel
 					carouselText
 					slides={reviewsEnglish}
@@ -297,11 +286,11 @@ export default function Home() {
 				/>
 			</div>
 
-			{changeLanguage === "en" ? (
+			{language === "/en" ? (
 				<Form
 					tabletActive={tabletActive}
 					desktopActive={desktopActive}
-					lang={changeLanguage}
+					lang={language}
 					onSubmit={(event) => {
 						event.preventDefault();
 
@@ -339,7 +328,7 @@ export default function Home() {
 				<Form
 					tabletActive={tabletActive}
 					desktopActive={desktopActive}
-					lang={changeLanguage}
+					lang={language}
 					onSubmit={(event) => {
 						event.preventDefault();
 
