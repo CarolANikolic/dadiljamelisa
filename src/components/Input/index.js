@@ -35,7 +35,6 @@ const Input = (props) => {
 					<CalendarInput
 						labelName={props.name}
 						name={props.name}
-						isTablet={props.tabletActive}
 						onChange={(value) => {
 							props.handleChange(value);
 							setEmpty(value === "");

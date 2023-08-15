@@ -1,149 +1,165 @@
 .main {
-  min-height: 100vh;
-  color: var(---black);
+	min-height: 100vh;
+	color: var(---black);
 }
 
 .imgContainer {
-  background-color: var(---beige);
+	background-color: var(---beige);
 }
 
 .imgContainerDimensions {
-  text-align: center;
-  width: 100%;
-  height: 300px;
+	text-align: center;
+	width: 100%;
+	height: 300px;
+}
+
+.aboutDesktop {
+	height: 500px;
 }
 
 .kidsPhoto {
-  width: 286px;
-  height: 286px;
+	width: 286px;
+	height: 286px;
 }
 
 .imagePhoto {
-  width: 286px;
-  height: 286px;
+	width: 286px;
+	height: 286px;
 }
 
 .containerGap {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  padding: 2rem 1rem 1.5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	padding: 2rem 1rem 1.5rem 1rem;
 }
 
 .containerPrices {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  margin: 0 auto;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin: 0 auto;
 }
 
 .birdLogo {
-  align-self: center;
+	align-self: center;
 }
 
-@media (min-width: 481px) and (max-width: 820px) {
-
-  .imgContainer {
-    background-color: var(---lightPink);
-  } 
-
-  .containerGap {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 3rem;
-  }
-
-  .containerPrices {
-    flex-direction: row;
-    gap: 0;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .prices {
-    max-width: 230px;
-    align-items: flex-end;
-  }
+.desktopOnly {
+	display: none;
 }
 
-@media (min-width: 821px) {
-  
-  .containerGap {
-    gap: 2rem;
-    padding-top: 5rem;
-  }
+.aboutSectiondesktop {
+	align-items: center;
+}
 
-  .desktopIntro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: var(---lightPink);
-    padding: 2rem 1.5rem;
-  }
+@media screen and (min-width: 481px) and (max-width: 820px) {
+	.imgContainer {
+		background-color: var(---lightPink);
+	}
 
-  .introInfoDesktop {
-      background-color: var(---beige);
-      gap: 1.25rem;
-      padding: 1.5rem 1rem;
-      justify-content: center;
-  }
+	.containerGap {
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 3rem;
+	}
 
-  .imgContainer {
-    background-color: var(---lightPink);
-  } 
+	.containerPrices {
+		flex-direction: row;
+		gap: 0;
+		justify-content: space-between;
+		width: 100%;
+	}
 
-  .imgContainerDimensions {
-    height: 500px;
-  }
+	.prices {
+		max-width: 230px;
+		align-items: flex-end;
+	}
+}
 
-  .imagePhoto {
-    width: 100%;
-    height: 100%;
-  }
+@media screen and (min-width: 821px) {
+	.containerGap {
+		gap: 2rem;
+		padding-top: 5rem;
+	}
 
-  .kidsPhoto {
-    width: 600px;
-    height: 500px; 
-  }
+	.desktopIntro {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		background-color: var(---lightPink);
+		padding: 2rem 1.5rem;
+	}
 
-  .sectionDesktop {
-    width: 80%;
-    margin: 0 auto;
-  }
+	.introInfoDesktop {
+		background-color: var(---beige);
+		gap: 1.25rem;
+		padding: 1.5rem 1rem;
+		justify-content: center;
+	}
 
-  .aboutDesktop {
-    width: 40%;
-    height: 300px; 
-    padding-left: 2rem;
-  }
+	.imgContainer {
+		background-color: var(---lightPink);
+	}
 
-  .aboutText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    width: 60%;
-    padding: 3rem 0;
-  }
+	.imgContainerDimensions {
+		height: 500px;
+	}
 
-  .aboutSectiondesktop {
-    display: flex;
-    flex-direction: row;
-    flex-direction: row-reverse;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 5rem;
-  }
+	.imagePhoto {
+		width: 430px;
+		height: auto;
+	}
 
-  .containerPrices {
-    flex-direction: row;
-    gap: 1rem;
-    width: 80%;
-    justify-content: center;
-  }
+	.kidsPhoto {
+		width: 600px;
+		height: 500px;
+	}
 
-  .lastSection {
-    padding-bottom: 5rem;
-  }
+	.sectionDesktop {
+		width: 80%;
+		margin: 0 auto;
+	}
 
+	.aboutDesktop {
+		width: 40%;
+		height: 300px;
+		padding-left: 2rem;
+	}
+
+	.aboutText {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+		width: 60%;
+		padding: 3rem 0;
+	}
+
+	.aboutSectiondesktop {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.containerPrices {
+		flex-direction: row;
+		gap: 1rem;
+		width: 80%;
+		justify-content: center;
+	}
+
+	.lastSection {
+		padding-bottom: 5rem;
+	}
+
+	.desktopOnly {
+		display: block;
+	}
+
+	.smallOnly {
+		display: none;
+	}
 }

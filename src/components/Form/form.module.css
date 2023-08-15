@@ -1,73 +1,91 @@
 .contactForm {
-    border: 11px solid var(---yellow);
-    background-color: var(---beige);
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
+	border: 11px solid var(---yellow);
+	background-color: var(---beige);
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
 }
-  
+
 .sunDrawing {
-    position: absolute;
-    right: 10%;
-    top: 8%;
+	position: absolute;
+	right: 10%;
+	top: 8%;
 }
-  
+
 .drawings {
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
-@media (min-width: 481px) and (max-width: 820px) {
-    .tabletForm {
-        border: 11px solid var(---yellow);
-        background-color: var(---beige);
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        gap: 1.25rem;
-        width: 90%;
-        margin: 0 auto;
-      }
-      
-    .tabletContainer {
-        width: 100%;
-        justify-content: center;
-    }
-    
-      .drawings {
-        width: 100%;
-    }
+.desktopDrawingsContainer {
+	display: none;
 }
 
-@media (min-width: 821px) {
+.tabletOnly {
+	display: none;
+}
 
-    .contactForm {
-        width: 80%;
-        margin: 0 auto;   
-    }
+@media screen and (min-width: 481px) and (max-width: 820px) {
+	.contactForm {
+		border: 11px solid var(---yellow);
+		background-color: var(---beige);
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		gap: 1.25rem;
+		width: 90%;
+		margin: 0 auto;
+	}
 
-   /* Add a new CSS class for the two-block layout */
-    .formContainer {
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 0 auto;
-    }
-    
-    .formFirstBlock {
-        grid-column: 1;
-    }
+	.tabletContainer {
+		width: 100%;
+		justify-content: center;
+	}
 
-    .formSecondBlock {
-        grid-column: 2;
-    }
+	.drawings {
+		width: 100%;
+	}
 
-    .desktopDrawingsContainer {
-        display: flex;
-        justify-content: space-between;
-    }
+	.mobileOnly {
+		display: none;
+	}
 
-    .drawings {
-        margin: 0;
-    }
-  
+	.tabletOnly {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 821px) {
+	.contactForm {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	/* Add a new CSS class for the two-block layout */
+	.formContainer {
+		position: relative;
+		display: flex;
+		justify-content: space-evenly;
+		margin: 0 auto;
+	}
+
+	.formFirstBlock {
+		grid-column: 1;
+	}
+
+	.formSecondBlock {
+		grid-column: 2;
+	}
+
+	.desktopDrawingsContainer {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.drawings {
+		margin: 0;
+	}
+
+	.mobileOnly {
+		display: none;
+	}
 }

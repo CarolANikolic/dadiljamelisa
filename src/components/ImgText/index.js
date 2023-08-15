@@ -10,20 +10,19 @@ const ImageAndText = ({ source, alt, heading, paragraph, color, ...props }) => {
 	return (
 		<div
 			className={`${styles.container} 
-			${props.tabletActive && 
-			styles.tabletExplanationContainer} 
-			${props.desktopActive && !props.tabletActive ? (
-						color === "green"
-							? styles.green
-							: color === "yellow"
-							? styles.yellow
-							: color === "beige"
-							? styles.beige
-							: color === "darkPink"
-							? styles.darkPink
-							: ""
-			) : ""} 
-			${styles.desktopExplanationContainer}`}
+			${styles.tabletExplanationContainer} 
+			${
+				color === "green"
+					? styles.green
+					: color === "yellow"
+					? styles.yellow
+					: color === "beige"
+					? styles.beige
+					: color === "darkPink"
+					? styles.darkPink
+					: ""
+			} 
+			`}
 		>
 			<div className={styles.activityImgContainer}>
 				<Image
@@ -36,7 +35,7 @@ const ImageAndText = ({ source, alt, heading, paragraph, color, ...props }) => {
 
 				<div
 					className={`
-					${styles.content} 
+					${!showText ? styles.content : styles.hide}
 					${styles.active}
 					`}
 					onClick={() => setShowText(true)}
@@ -45,40 +44,31 @@ const ImageAndText = ({ source, alt, heading, paragraph, color, ...props }) => {
 				</div>
 			</div>
 
-			{(showText || props.tabletActive || props.desktopActive) && (
-				<div
-					className={`${
-						color === "green"
-							? styles.green
-							: color === "yellow"
-							? styles.yellow
-							: color === "beige"
-							? styles.beige
-							: color === "darkPink"
-							? styles.darkPink
-							: ""
-					} ${styles.explanationContainer}`}
-				>
+			<div
+				className={`${!showText && styles.hide} ${
+					color === "green"
+						? styles.green
+						: color === "yellow"
+						? styles.yellow
+						: color === "beige"
+						? styles.beige
+						: color === "darkPink"
+						? styles.darkPink
+						: ""
+				} ${styles.explanationContainer}`}
+			>
+				<TextBlock bold headingTwoContent={heading} />
+				<TextBlock paragraph paragraphContent={paragraph} isCentered />
 
-						<TextBlock bold="bold" headingTwoContent={heading} />
-						<TextBlock
-							paragraph
-							paragraphContent={paragraph}
-							isCentered={props.tabletActive}
-						/>
-
-					<Image
-						className={`${styles.closeIcon} ${
-							(props.tabletActive || props.desktopActive) && styles.hideCloseIcon
-						}`}
-						src="/svgs/icons/chevron-down.svg"
-						width={40}
-						height={40}
-						alt="x close"
-						onClick={() => setShowText(false)}
-					/>
-				</div>
-			)}
+				<Image
+					className={`${styles.closeIcon}`}
+					src="/svgs/icons/chevron-down.svg"
+					width={40}
+					height={40}
+					alt="x close"
+					onClick={() => setShowText(false)}
+				/>
+			</div>
 		</div>
 	);
 };

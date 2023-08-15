@@ -30,9 +30,7 @@ const CalendarInput = (props) => {
 				timeIntervals={60}
 				dateFormat="MM/dd/yyyy - HH:mm"
 				required
-				className={`${styles.inputField} ${
-					props.isTablet && styles.tabletCalendar
-				}`} // Apply a custom CSS class for styling
+				className={`${styles.inputField} ${styles.tabletCalendar}`} // Apply a custom CSS class for styling
 				calendarClassName={styles.datepickerCalendar} // Apply a custom CSS class for the calendar container
 			/>
 		</div>

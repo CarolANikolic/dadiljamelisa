@@ -1,77 +1,90 @@
 .headingPlayfull {
-    font-family: var(---amatic);
-    text-align: center;
+	font-family: var(---amatic);
+	text-align: center;
 }
 
 .headingPlayfullBig {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 .headingPlayfullSmaller {
-    font-size: 1.5rem;
-    font-weight: var(---bold);
+	font-size: 1.5rem;
+	font-weight: var(---bold);
 }
 
 .headingRegular {
-    font-size: 1rem;
-    text-align: center;
+	font-size: 1rem;
+	text-align: center;
 }
 
 .headingRegularBold {
-    font-family: var(---montserrat);
-    font-weight: var(---bold);
+	font-family: var(---montserrat);
+	font-weight: var(---bold);
 }
 
 .headingRegularUppercase {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .paragraphStyle {
-    font-size: .875rem;
-    line-height: 1.5rem;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
 }
 
 .centeredText {
-    text-align: center;
+	text-align: center;
 }
 
 .justifyedText {
-    text-align: justify;
+	text-align: justify;
 }
 
-@media (min-width: 481px) and (max-width: 820px) {
+.desktopOnly {
+	display: none;
+}
 
-    .headingPlayfullBig, .headingRegularBold, .headingPlayfullSmaller {
-        margin: 0 auto;
-    }
-    
-    .headingPlayfullBig {
-        width: 60%;
-        height: 100px;
-        line-height: 3rem
-    }
+@media screen and (min-width: 481px) and (max-width: 820px) {
+	.headingPlayfullBig,
+	.headingRegularBold,
+	.headingPlayfullSmaller {
+		margin: 0 auto;
+	}
 
-    .headingPlayfullSmaller {
-        font-size: 2.5rem;
-        width: 70%;
-    }
+	.headingPlayfullBig {
+		width: 60%;
+		height: 100px;
+		line-height: 3rem;
+	}
 
-    .headingRegularBold {
-        width: 100%;
-    }
-    
-    .paragraphStyle{
-        width: 100%;
-        margin: 0 auto;
-    }
+	.headingPlayfullSmaller {
+		font-size: 2.5rem;
+		width: 70%;
+	}
 
-    .tabletWidth {
-        width: 80%;
-    }
+	.headingRegularBold {
+		width: 100%;
+	}
+
+	.paragraphStyle {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.tabletWidth {
+		width: 80%;
+	}
 }
 
 @media (min-width: 821px) {
-    .paragraphStyle {
-        font-size: 1rem;
-    }
+	.paragraphStyle {
+		font-size: 1rem;
+	}
+
+	.desktopOnly {
+		display: block;
+	}
+
+	.smallOnly {
+		display: none;
+	}
 }
