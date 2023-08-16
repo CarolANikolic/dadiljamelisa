@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "messages_en_json";
+exports.ids = ["messages_en_json"];
+exports.modules = {
+
+/***/ "./messages/en.json":
+/*!**************************!*\
+  !*** ./messages/en.json ***!
+  \**************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"Index":{"linkOne":"Home","linkTwo":"About","linkThree":"Prices","linkFour":"Contact","introTitle":"Your Trusted Educator and Nanny for a Relaxing Weekend Without Children!","introExplanation":"Are you craving a much-needed break? Whether you have obligations to attend to, want to enjoy a night out with friends, or simply need time to rest and recharge, I have you covered. I\'m Melisa, a professional and experienced caregiver. With my 24-hour babysitting services you can enjoy a worry-free break. Comprehensive Development: I offer a diverse range of activities, workshops, and educational subjects, ensuring your child\'s holistic growth. Nurturing Environment:  My work is based on creating a supportive and inclusive space, fostering positive social connections and valuable mentorship. Collaborative Learning: I encourage siblings to learn from each other, build friendships, and inspire one another, fostering a supportive and enriching environment.","introExplanationDesktop":"I prioritize the well-being and development of your child in a nurturing environment where your child can thrive. From creative workshops that encourage imagination and fine motor skills, to an educational program covering various subjects like math, speech, environment, music, physics, and art, to engaging sports activities such as relay games, competitive games, polygons, story polygons, and dance activities - your child will have a well-rounded experience. I also offer the opportunity for field trips and visits to local communities, such as museums and theatres, to broaden your child\'s horizons and provide enriching experiences. By facilitating interactions between children of different ages, I encourage positive social interactions and provide opportunities for older children to mentor and inspire their younger siblings. This creates a supportive and inclusive environment where children learn from each other, build friendships, and develop valuable social skills.","extraIntroDesktop":"Are you craving a much-needed break? Whether you have obligations to attend to, want to enjoy a night out with friends, or simply need time to rest and recharge, I have you covered. I\'m Melisa, a professional and experienced caregiver. With my 24-hour babysitting services you can enjoy a worry-free break.","extraHeadingDesktop":"Nurturing all-round development for your child\'s flourishing future.","secondaryHeading":"The only nanny and educator that offers a 24h care service in Belgrade!","buttonSchedule":"Scheduele","aboutTitle":"Hi, I’m Melisa. I\'m not just a nanny, I\'m an educator with a Teacher Education Faculty degree.","aboutParagraph":"As an educator, I go beyond traditional childcare. With me, your children thrive through enriching workshops, tailored educational programs, fun-filled sports activities, and exciting field trips. Trust me to care for your children and educate and empower them for a bright future.","pricesHeading":"Competitive and Transparent Pricing","promotionInfo":"Weekend promotion 24H for EUR 50","testimonialsHeading":"What the parents have to say","formHeading":"I\'m here to help! Get in touch to schedule your child’s nurturing care!","callToActionHeading":"Let me provide exceptional care for your child while you enjoy a well-deserved break!","callToActionInfoOne":"Conveniently, I\'m available for 24-hour care on weekends. Appointments can also be made for weekdays.","callToActionInfoTwo":"Say goodbye to concerns about relying on grandparents or other caregivers. Make an appointment!"}}');
+
+/***/ })
+
+};
+;

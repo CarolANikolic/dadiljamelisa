@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "messages_sr_json";
+exports.ids = ["messages_sr_json"];
+exports.modules = {
+
+/***/ "./messages/sr.json":
+/*!**************************!*\
+  !*** ./messages/sr.json ***!
+  \**************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"Index":{"linkOne":"Home","linkTwo":"O Meni","linkThree":"Cenovnik","linkFour":"Kontakt","introTitle":"Vaš pouzdani vaspitač i dadilja za opuštajući vikend bez dece!","introExplanation":"Da li osećate potrebu za neophodnim odmorom? Bez obzira da li imate obaveze koje treba da ispunite, želite da provedete veče sa prijateljima ili jednostavno trebate vreme da se odmorite i napunite baterije, ja sam tu da vam pomognem. Ja sam Melisa, profesionalna i iskusna negovateljica. Sa mojim uslugama čuvanja dece tokom 24 sata, možete uživati u bezbrižnom odmoru. Potpuni razvoj: Pruzam raznovrstan spektar aktivnosti, radionica i edukativnih tema, osiguravajući celokupan rast vašeg deteta. Podsticajno okruženje: Moje radno okruženje se temelji na stvaranju podržavajućeg i inkluzivnog prostora, gde se neguju pozitivne društvene veze i važno mentorstvo. Sarađivačko učenje: Podstičem decu da uče jedni od drugih, da grade prijateljstva i inspirišu jedni druge, stvarajući podržavajuće i obogaćujuće okruženje.","introExplanationDesktop":"Stavljam naglasak na dobrobit i razvoj vašeg deteta u podsticajnom okruženju gde će se vaše dete razvijati. Od kreativnih radionica koje podstiču maštu i fine motoričke veštine, do edukativnog programa koji obuhvata različite predmete poput matematike, govora, prirode, muzike, fizike i umetnosti, do uključujućih sportskih aktivnosti poput trkačkih igara, takmičarskih igara, poligona, priča poligona i plesnih aktivnosti - vaše dete će imati sveobuhvatno iskustvo. Takođe nudim mogućnost odlazaka na terenske izlete i posete lokalnoj zajednici, poput muzeja i pozorišta, kako bi se proširile horizonte vašeg deteta i pružile obogaćujuće doživljaje. Omogućavam interakcije između dece različitog uzrasta, podstičem pozitivne društvene interakcije i pružam prilike starijoj deci da mentoriraju i inspirišu svoju mlađu braću i sestre. Na taj način stvaram podržavajuće i inkluzivno okruženje gde deca uče jedno od drugog, grade prijateljstva i razvijaju vredne socijalne veštine.","extraIntroDesktop":"Da li osećate potrebu za neophodnim odmorom? Bez obzira da li imate obaveze koje treba da ispunite, želite da uživate u večeri sa prijateljima ili jednostavno trebate vreme da se odmorite i napunite baterije, tu sam da vam pomognem. Ja sam Melisa, profesionalna i iskusna negovateljica. Sa mojim uslugama čuvanja dece tokom 24 sata, možete uživati u odmoru bez briga.","extraHeadingDesktop":"Negujemo sveobuhvatni razvoj za procvat budućnosti vašeg deteta.","secondaryHeading":"Jedina dadilja i vaspitačica koja nudi uslugu 24 sata nege u Beogradu!","buttonSchedule":"Raspored","aboutTitle":"Zdravo, ja sam Melisa Sulejmani. Nisam samo dadilja, ja sam vaspitač sa diplomom Učiteljskog fakulteta.","aboutParagraph":"Kao vaspitač, prevazilazim tradicionalnu brigu o deci. Sa mnom vaša deca napreduju kroz obogaćujuće radionice, prilagođene obrazovne programe, zabavne sportske aktivnosti i uzbudljive izlete. Verujte mi da brinem o vašoj deci i da ih obrazujem i osnažim za svetlu budućnost.","pricesHeading":"Konkurentne i transparentne cene","promotionInfo":"Vikend promocija 24 časova za 50 evra","testimonialsHeading":"Šta roditelji imaju da kažu","formHeading":"Tu sam da pomognem! Javite se da dogovorimo uslugu nege Vašeg deteta.","callToActionHeading":"Neka pružim izvanrednu brigu za vaše dete dok vi uživate u zasluženom odmoru!","callToActionInfoOne":"Na raspolaganju sam za 24-časovnu negu tokom vikenda. Takođe je moguće zakazati termine i tokom radnih dana.","callToActionInfoTwo":"Oprostite se od briga u vezi oslanjanja na bake i deke ili druge negovatelje. Zakazujte svoj termin!"}}');
+
+/***/ })
+
+};
+;
