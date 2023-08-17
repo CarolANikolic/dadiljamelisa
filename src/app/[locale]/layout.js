@@ -33,6 +33,9 @@ export default async function LocaleLayout({ children, params: { locale } }) {
 
 	return (
 		<html lang={locale}>
+			<head>
+				<meta name="google-site-verification" content="7E1diwM4G9xvsG9KfbFb3zw8f9yjjE5gmF4uxJikk6U" />
+			</head>
 			<body className={montserratRegular.className}>
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					{children}
