@@ -176,6 +176,11 @@ export default async function Home() {
 						alt="price for three kids"
 					/>
 				</div>
+
+				<TextBlock
+					bold
+					headingTwoContent={translate("foodIncluded")}
+				/>
 			</section>
 
 			<section className={styles.containerGap}>

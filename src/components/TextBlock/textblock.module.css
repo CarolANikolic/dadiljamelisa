@@ -24,6 +24,9 @@
 
 .headingRegularUppercase {
 	text-transform: uppercase;
+	font-weight: var(---bold);
+	background-color: var(---lightPink);
+	margin: 0 auto;
 }
 
 .paragraphStyle {
