@@ -144,7 +144,7 @@ export default async function Home() {
 				/>
 				<TextBlock
 					uppercase="uppercase"
-					headingTwoContent={translate("promotionInfo")}
+					headingTwoContent={translate("promotionInfoOne")}
 				/>
 
 				<div className={styles.containerPrices}>
@@ -179,7 +179,7 @@ export default async function Home() {
 
 				<TextBlock
 					bold
-					headingTwoContent={translate("foodIncluded")}
+					headingTwoContent={translate("promotionInfoTwo")}
 				/>
 			</section>
 
