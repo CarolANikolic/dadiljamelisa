@@ -20,8 +20,8 @@ Disclosure: The client gave us prior authorization to display this source code a
 - Making the HTML structure;
 - Styling the page elements from a mobile-first workflow;
 - Download dependencies
-* @emailjs/browser: used to send emails using client-side only.
-* next-intl: a library from NextJS used for internacionalization, and translation of projects into multiple languages.
+    * @emailjs/browser: used to send emails using client-side only.
+    * next-intl: a library from NextJS used for internacionalization, and translation of projects into multiple languages.
 - Creating emailJS a template
 - Creating a function to send email using emailJS;
 - Testing email;
