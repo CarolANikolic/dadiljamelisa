@@ -33,19 +33,19 @@ const Footer = (props) => {
 					<h1 className={styles.title}>About</h1>
 					<ul className={styles.linkList}>
 						<li>
-							<Link className={styles.link} href="/">
+							<a className={styles.link} href="#home">
 								Home
-							</Link>
+							</a>
 						</li>
 						<li>
-							<Link className={styles.link} href="/">
+							<a className={styles.link} href="#about">
 								About
-							</Link>
+							</a>
 						</li>
 						<li>
-							<Link className={styles.link} href="/">
+							<a className={styles.link} href="#reviews">
 								Reviews
-							</Link>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -54,14 +54,14 @@ const Footer = (props) => {
 					<h1 className={styles.title}>Services</h1>
 					<ul className={styles.linkList}>
 						<li>
-							<Link className={styles.link} href="/">
+							<a className={styles.link} href="#prices">
 								Prices
-							</Link>
+							</a>
 						</li>
 						<li>
-							<Link className={styles.link} href="/">
+							<a className={styles.link} href="#contact">
 								Contact
-							</Link>
+							</a>
 						</li>
 					</ul>
 				</div>

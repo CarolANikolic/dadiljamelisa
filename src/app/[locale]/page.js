@@ -76,7 +76,7 @@ export default async function Home() {
 
 					<Button
 						space="btnOutSpace"
-						link="addLink"
+						link="anchorLink"
 						linkId="#form"
 						btnTitle={translate("buttonSchedule")}
 					/>
@@ -177,13 +177,10 @@ export default async function Home() {
 					/>
 				</div>
 
-				<TextBlock
-					bold
-					headingTwoContent={translate("promotionInfoTwo")}
-				/>
+				<TextBlock bold headingTwoContent={translate("promotionInfoTwo")} />
 			</section>
 
-			<section className={styles.containerGap}>
+			<section id="reviews" className={styles.containerGap}>
 				<TextBlock
 					headingType
 					heading="headingSmaller"

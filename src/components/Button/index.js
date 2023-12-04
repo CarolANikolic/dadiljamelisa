@@ -13,6 +13,10 @@ const Btn = (props) => {
 				<Link href={props.linkId} className={styles.generalBtn}>
 					{props.btnTitle}
 				</Link>
+			) : props.link === "anchorLink" ? (
+				<a href={props.linkId} className={styles.generalBtn}>
+					{props.btnTitle}
+				</a>
 			) : (
 				<button className={styles.generalBtn} type={props.type}>
 					{props.btnTitle}
