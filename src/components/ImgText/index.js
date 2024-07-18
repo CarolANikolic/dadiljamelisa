@@ -31,6 +31,7 @@ const ImageAndText = ({ source, alt, heading, paragraph, color, ...props }) => {
 					width={100}
 					height={100}
 					alt={alt}
+					unoptimized={true}
 				/>
 
 				<div

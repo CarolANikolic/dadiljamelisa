@@ -28,24 +28,24 @@ const Navbar = (props) => {
 
 				<ul className={`${styles.list} ${menu && styles.active}`}>
 					<li>
-						<Link className={styles.listItem} href="#home">
+						<a className={styles.listItem} href="#home">
 							{props.linkOne}
-						</Link>
+						</a>
 					</li>
 					<li>
-						<Link className={styles.listItem} href="#about">
+						<a className={styles.listItem} href="#about">
 							{props.linkTwo}
-						</Link>
+						</a>
 					</li>
 					<li>
-						<Link className={styles.listItem} href="#prices">
+						<a className={styles.listItem} href="#prices">
 							{props.linkThree}
-						</Link>
+						</a>
 					</li>
 					<li>
-						<Link className={styles.listItem} href="#contact">
+						<a className={styles.listItem} href="#contact">
 							{props.linkFour}
-						</Link>
+						</a>
 					</li>
 				</ul>
 			</div>
