@@ -136,7 +136,7 @@ export default async function Home() {
 				<Carousel slides={activitiesImg} />
 			</section>
 
-			<section className={styles.containerGap} id="prices">
+			{/* <section className={styles.containerGap} id="prices">
 				<TextBlock
 					headingType
 					heading="headingSmaller"
@@ -178,7 +178,7 @@ export default async function Home() {
 				</div>
 
 				<TextBlock bold headingTwoContent={translate("promotionInfoTwo")} />
-			</section>
+			</section> */}
 
 			<section id="reviews" className={styles.containerGap}>
 				<TextBlock
